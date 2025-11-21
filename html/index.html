@@ -89,6 +89,421 @@
                         
                         </div>
 
+                        <div class="responsive-cards">
+                            <div class="table1-mobile-version">
+
+                                <h3 class="table1-subtitle-mobile-version">1.4 Toolkit Features Table</h3>
+                                <h4 class="table1-subtitle-mobile-version">1.4 Toolkit Features Table</h4>
+
+                                     <div class="table1 table">
+
+                                        <div class="card-1">
+                                            <div class="card-slot-a">
+                                                <h5>Feature</h5>
+                                                <p>Project Scaffolding</p>
+                                            </div>
+                                            <div class="card-slot-b">
+                                                <h5>Purpose</h5>
+                                                <p>Generates a fully structured starter project with chosen stack and configs</p>
+                                            </div>
+                                            <div class="card-slot-c">
+                                                <h5>Command</h5>
+                                                <p><code>npx dev-toolkit init my-app --template react-ts</code></p>
+                                            </div>
+                                            <div class="card-slot-d">
+                                                <h5>Customize</h5>
+                                                <p><span class="table-checkmark">✅</span><span class="checkmark-text"> Yes</span></p>
+                                            </div>
+                                            <div class="card-slot-e">
+                                                <h5>Notes</h5>
+                                                <p>Includes folder structure, initial files, ESLint, Prettier, Tailwind and routing support</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card-2">
+                                            <div class="card-slot-a">
+                                                <h5>Feature</h5>
+                                                <p>CLI Generator</p>
+                                            </div>
+                                            <div class="card-slot-b">
+                                                <h5>Purpose</h5>
+                                                <p>Creates boilerplate files for components, utilities, hooks and services</p>
+                                            </div>
+                                            <div class="card-slot-c">
+                                                <h5>Command</h5>
+                                                <p><code>dev-toolkit generate component Button</code></p>
+                                            </div>
+                                            <div class="card-slot-d">
+                                                <h5>Customize</h5>
+                                                <p><span class="table-checkmark">✅</span><span class="checkmark-text"> Yes</span></p>
+                                            </div>
+                                            <div class="card-slot-e">
+                                                <h5>Notes</h5>
+                                                <p>Can override scripts or use in package.json via <code>dev-toolkit run</code></p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card-3">
+                                            <div class='card-slot-a'>
+                                                <h5>Feature</h5>
+                                                <p>Reusable Components</p>
+                                            </div>
+                                            <div class="card-slot-b">
+                                                <h5>Purpose</h5>
+                                                <p>Offers a library of base UI components (e.g., Button, Model, Input)</p>
+                                            </div>
+                                            <div class="card-slot-c">
+                                                <h5>Command</h5>
+                                                <p><code>import {Button} from 'dev-toolkit/ui'</code></p> 
+                                            </div>
+                                            <div class="card-slot-d">
+                                                <h5>Customize</h5>
+                                                <p><span class="table-checkmark">✅</span><span class="checkmark-text"> Yes</span></p>     
+                                            </div>
+                                            <div class="card-slot-e">
+                                                <h5>Notes</h5>
+                                                <p>Theming via CSS variables or tailwind, includes accessibility tags</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card-4">
+                                            <div class="card-slot-a">
+                                                <h5>Feature</h5>
+                                                <p>Custom Scripts</p>
+                                            </div>
+                                            <div class="card-slot-b">
+                                                <h5>Purpose</h5>
+                                                <p>Includes scripts for linting, formatting, testing, and building</p>
+                                            </div>
+                                            <div class="card-slot-c">
+                                                <h5>Command</h5>
+                                                <p><code>dev-toolkit lint dev-toolkit format dev-toolkit build</code></p>
+                                            </div>
+                                            <div class="card-slot-d">
+                                                <h5>Customize</h5>
+                                                <p><span class="table-checkmark">⚠️</span><span class="checkmark-text"> Partially</span></p>
+                                            </div>
+                                            <div class="card-slot-e">
+                                                <h5>Notes</h5>
+                                                <p>Can override scripts or use in package.js via <code>dev-toolkit run</code></p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card-5">
+                                            <div class="card-slot-a">
+                                                <h5>Feature</h5>
+                                                <p>Environment Manager</p>
+                                            </div>
+                                            <div class="card-slot-b">
+                                                <h5>Purpose</h5>
+                                                <p>Simplifies creation of <code>.evn</code> files for dev, test and product environments</p>
+                                            </div>
+                                            <div class="card-slot-c">
+                                                <h5>Command</h5>
+                                                <p><code>dev-toolkit env create --mode=production</code></p>
+                                            </div>
+                                            <div class="card-slot-d">
+                                                <h5>Customize</h5>
+                                                <p><span class="table-checkmark">✅</span><span class="checkmark-text"> Yes</span></p>
+                                            </div>
+                                            <div class="card-slot-e">
+                                                <h5>Notes</h5>
+                                                <p>Auto-fills from a template, supports encryption</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card-6">
+                                            <div class="card-slot-a">
+                                                <h5>Feature</h5>
+                                                <p>Configuration File</p>
+                                            </div>
+                                            <div class="card-slot-b">
+                                                <h5>Purpose</h5>
+                                                <p><code>.devtoolkitrc</code> controls directory paths, naming patterns, style, etc.</p>
+                                            </div>
+                                            <div class="card-slot-c">
+                                                <h5>Command</h5>
+                                                <p><code>JSON or YAML format</code></p>
+                                            </div>
+                                            <div class="card-slot-d">
+                                                <h5>Customize</h5>
+                                                <p><span class="table-checkmark">✅</span><span class="checkmark-text"> Yes</span></p>
+                                            </div>
+                                            <div class="card-slot-e">
+                                                <h5>Notes</h5>
+                                                <p>Allows full override of defaults, required for custom generators</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card-7">
+                                            <div class="card-slot-a">
+                                                <h5>Features</h5>
+                                                <p>Template Packs</p>
+                                            </div>
+                                            <div class="card-slot-b">
+                                                <h5>Purpose</h5>
+                                                <p>Preset stack with tools pre-integrated (e.g., React + Tailwind + TypScript)</p>
+                                            </div>
+                                            <div class="card-slot-c">
+                                                <h5>Command</h5>
+                                                <p><code>--template vue-td --template svelte-basic</code></p>
+                                            </div>
+                                            <div class="card-slot-d">
+                                                <h5>Customize</h5>
+                                                <p><span class="table-checkmark">✅</span><span class="checkmark-text"> Yes</span></p>
+                                            </div>
+                                            <div class="card-slot-e">
+                                                <h5>Notes</h5>
+                                                <p>Includes framwork specific setup, file structure and plugins</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card-8">
+                                            <div class="card-slot-a">
+                                                <h5>Features</h5>
+                                                <p>Dev Server Helper</p>
+                                            </div>
+                                            <div class="card-slot-b">
+                                                <h5>Purpose</h5>
+                                                <p>Wraps Common dev commands (e.g., Vite, Webpack) under one uniform command</p>
+                                            </div>
+                                            <div class="card-slot-c">
+                                                <h5>Command</h5>
+                                                <p><code>dev-toolkit dev</code></p>
+                                            </div>
+                                            <div class="card-slot-d">
+                                                <h5>Customize</h5>
+                                                <p><span class="table-checkmark">✅</span><span class="checkmark-text"> Yes</span></p>
+                                            </div>
+                                            <div class="card-slot-e">
+                                                <h5>Notes</h5>
+                                                <p>Auto-detects project type and runs the appropriate dev server</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card-9">
+                                            <div class="card-slot-a">
+                                                <h5>Features</h5>
+                                                <p>Code Snippets</p>
+                                            </div>
+                                            <div class="card-slot-b">
+                                                <h5>Purpose</h5>
+                                                <p>Collection of pre-written code patterns and logic blocks</p>
+                                            </div>
+                                            <div class="card-slot-c">
+                                                <h5>Command</h5>
+                                                <p><code>dev-toolkit snippet auth-form</code></p>
+                                            </div>
+                                            <div class="card-slot-d">
+                                                <h5>Customize</h5>
+                                                <p><span class="table-checkmark">✅</span><span class="checkmark-text"> Yes</span></p>
+                                            </div>
+                                            <div class="card-slot-e">
+                                                <h5>Notes</h5>
+                                                <p>Inserts common patterns like auth forms, error boundaries, API calls</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card-10">
+                                            <div class="card-slot-a">
+                                                <h5>Feature</h5>
+                                                <p>Post-Install Tasks</p>
+                                            </div>
+                                            <div class="card-slot-b">
+                                                <h5>Purpose</h5>
+                                                <p>Hooks for automation initial steps like installing dependencies</p>
+                                            </div>
+                                            <div class="card-slot-c">
+                                                <h5>Command</h5>
+                                                <p><code>Included in scaffolding</code></p>
+                                            </div>
+                                            <div class="card-slot-d">
+                                                <h5>Customize</h5>
+                                                <p><span class="table-checkmark">✅</span><span class="checkmark-text"> Yes</span></p>
+                                            </div>
+                                            <div class="card-slot-e">
+                                                <h5>Notes</h5>
+                                                <p>Also supports custom post-install scripts</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card-11">
+                                            <div class="card-slot-a">
+                                                <h5>Features</h5>
+                                                <p>Integration Helpers</p>
+                                            </div>
+                                            <div class="card-slot-b">
+                                                <h5>Purpose</h5>
+                                                <p>Pre-configured ESLint, Prettier, Tailwind, Husky, TypeScript, Jest, etc.</p>
+                                            </div>
+                                            <div class="card-slot-c">
+                                                <h5>Command</h5>
+                                                <p><code>Automatically included or configured via --features flag</code></p>
+                                            </div>
+                                            <div class="card-slot-d">
+                                                <h5>Customize</h5>
+                                                <p><span class="table-checkmark">✅</span><span class="checkmark-text"> Yes</span></p>
+                                            </div>
+                                            <div class="card-slot-e">
+                                                <h5>Notes</h5>
+                                                <p>Select which ones ot include during setop or enable later</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-12">
+                                            <div class="card-slot-a">
+                                                <h5>Features</h5>
+                                                <p>Plugin System</p>
+                                            </div>
+                                            <div class="card-slot-b">
+                                                <h5>Purpose</h5>
+                                                <p>Extend the toolkit with your own CLI commands and generators</p>
+                                            </div>
+                                            <div class="card-slot-c">
+                                                <h5>Command</h5>
+                                                <p><code>dev-toolkit plugin add my-plugin</code></p>
+                                            </div>
+                                            <div class="card-slot-d">
+                                                <h5>Customize</h5>
+                                                <p><span class="table-checkmark">✅</span><span class="checkmark-text"> Yes</span></p>
+                                            </div>
+                                            <div class="card-slot-e">
+                                                <h5>Notes</h5>
+                                                <p>Plugins follow a simple folder/module structure and auto-register</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="responsive-table">
+                            <div class="table1-desktop-version">
+
+                                <h3 class="table-1-subtitle-desktop-version">1.4 Toolkit Features Table</h3>
+
+                                    <table class="table1 table">
+                                        <caption><span id="table-header-icon">📦</span> Expanded Toolkit Contents Table</caption>
+                                            <thead>
+                                            <tr>
+                                                <th>Feature</th>
+                                                <th>What It Does</th>
+                                                <th>Example Usage/Command</th>
+                                                <th>Customizable</th>
+                                                <th>Notes</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>Project Scaffolding</td>
+                                                <td>Generates a fully structured starter project with chosen stack and configs</td>
+                                                <td><code>npx dev-toolkit init my-app --template react-ts</code></td>
+                                                <td><span class="checkmark">✅</span>Yes</td>
+                                                <td>Includes folder structure, initial files, ESLint, Prettier, Tailwind and routing support</td>
+                                            </tr>
+                                            <tr>
+                                                <td>CLI Generator</td>
+                                                <td>Creates boulerplate files for components, utilities, hooks and services</td>
+                                                <td><code>dev-toolkit denerate component Button</code></td>
+                                                <td><span class="checkmark">✅</span>Yes</td>
+                                                <td>Can override scripts or use in package.json via <code>dev-toolkit run</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Reusable Components</td>
+                                                <td>Offers a library of base UI components (e.g., Button, Model, Input)</td>
+                                                <td><code>inport {Button} from 'dev-toolkit/ui'</code></td>
+                                                <td><span class="checkmark">✅</span>Yes</td>
+                                                <td>Theming via CSS variables or tailwind, includes accessibility tags</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Custom Scripts</td>
+                                                <td>Includes scripts for linting, formatting, testing, and building</td>
+                                                <td><code>dev-toolkit lint dev-toolkit format dev-toolkit build</code></td>
+                                                <td><span class="caution">⚠️</span>Partially</td>
+                                                <td>Can override scripts or use in package.json via <code>dev-toolkit run</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Environment Manager</td>
+                                                <td>Simplifies creation of <code>.env</code> files for dev, test and product environments</td>
+                                                <td><code>dev-toolkit env create --mode=production</code></td>
+                                                <td><span class="checkmark">✅</span>Yes</td>
+                                                <td>Auto-filss from a template, supports encryption</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Configuration File</td>
+                                                <td><code>.devtoolkitrd</code> controls directory paths, naming patterns, styles, etc.</td>
+                                                <td>JSON or YAML format</td>
+                                                <td><span class="checkmark">✅</span>Yes</td>
+                                                <td>Allows full override of defaults; required for custom generators</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Template Packs</td>
+                                                <td>Preset stanck with tools pre-integrated (e.g., React + Tailwind + TypeScript)</td>
+                                                <td><code>--template vue-td --template svelte-basic</code></td>
+                                                <td><span class="checkmark">✅</span>Yes</td>
+                                                <td>Includes framework-specific setup, file structure and plugins</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dev Server Helper</td>
+                                                <td>Wraps common dev commands (e.g., Vite, Webpack) under one uniform command</td>
+                                                <td><code> dev-toolkit dev</code></td>
+                                                <td><span class="checkmark">✅</span>Yes</td>
+                                                <td>Auto-detects project type and runs the appropriate dev server</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Code Snippets</td>
+                                                <td>Collection of pre-written code patterns and logic blocks</td>
+                                                <td><code>dev-toolkit snipper auth-form</code></td>
+                                                <td><span class="checkmark">✅</span>Yes</td>
+                                                <td>Inserts common patterns like auth forms, error boundaries, API calls</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Post-Install Tasks</td>
+                                                <td>Hooks for automating initial steps like installing dependencies</td>
+                                                <td>Included in scaffolding</td>
+                                                <td><span class="checkmark">✅</span>Yes</td>
+                                                <td>Also supports custom post-install scripts via config</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Integration Helpers</td>
+                                                <td>Pre-configured ESLint, Prettier, Tailwind, Husky, TypeScript, Jest, etc.</td>
+                                                <td>Automatically included or configured via <code>--features</code> flag</td>
+                                                <td><span class="checkmark">✅</span>Yes</td>
+                                                <td>Select which ones to include during setup or enable later</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Plugin System</td>
+                                                <td>Extend the toolkit with your own CLI commands and generators</td>
+                                                <td><code>dev-toolkit plugin add my-plugin</code></td>
+                                                <td><span class="checkmark">✅</span>Yes</td>
+                                                <td>Plugins follow a sumple folder/module structure and auto-register</td>
+                                            </tr>
+                                            </tbody>
+                                    </table>
+
+                            </div>
+                        </div>
+
+                        <div class="intro-notes notes">
+                            
+                            <h3 class="section-subtitle">1.5 Notes on Customization</h3>
+
+                                <ul class="table1-notes">
+                                    <li><span class="bold">Fully customizable features</span> (✅ Yes) means you can override defaults via <code>.devtoolkitrc</code>, template files, or CLI flags.</li>
+                                    <li><span class="bold">Partially customizable</span> (⚠️) means you can adjust how it runs or what it runs, but not its core logic unless forked or extended with plugins.</li>
+                                </ul>
+
+                        </div>
+
+                        <div class="intro-cli-example example">
+                            
+                            <h3 class="section-subtitle">1.6 Example CLI Usage</h3>
+
+                                <pre><code>npx dev-toolkit init my-app --template react-tailwind</code></pre>
+                                <p>This command initializes a new project named <code>my-app</code> with a React + Tailwind CSS setup, including routing, pre-configured ESLint and Prettier rules, as well as a default folder structure.</p>
+
+                        </div>
+
                     </div>
 
                 </section>
