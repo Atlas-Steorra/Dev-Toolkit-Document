@@ -55,7 +55,7 @@
                                 
                                 <h3 class="subsection-subtitle">1.1 What is Dev Toolkit?</h3>
 
-                                <p>Dev Toolkit is a modular, front-end-focused development toolkit designed to streamline and standardize the setup, scaffolding, and coding experience across multiple projects. It includes a command-line interface (CLI), configurable project templates, reusable UI components, code formatting tools and optional integrations with frameworks and libraries like React, Vue, Tailwind CSS, TypeScript and more.</p>
+                                    <p>Dev Toolkit is a modular, front-end-focused development toolkit designed to streamline and standardize the setup, scaffolding, and coding experience across multiple projects. It includes a command-line interface (CLI), configurable project templates, reusable UI components, code formatting tools and optional integrations with frameworks and libraries like React, Vue, Tailwind CSS, TypeScript and more.</p>
 
                             </div>
 
@@ -65,13 +65,13 @@
 
                                 <h3 class="subsection-subtitle">1.2 Why Use Dev Toolkit?</h3>
 
-                                <ul id="intro-list-one" class="list">
-                                    <li><span class="bold">Faster Setup</span>: Instantly scaffold projects with pre-configured environments.</li>
-                                    <li><span class="bold">Reusable Assets</span>: Use pre-built components, hooks, and utility functions.</li>
-                                    <li><span class="bold">Customizable</span>: Easily adapt to your preferred tech stack or team standards.</li>
-                                    <li><span class="bold">Productivity-Boosting CLI</span>: Automate repetitive tasks like component generation, linting, formatting, and more.</li>
-                                    <li><span class="bold">Consistent Structure</span>: Enforces a clean and consistent folder layout and naming conventions.</li>
-                                </ul>
+                                    <ul id="intro-list-one" class="list">
+                                        <li><span class="bold">Faster Setup</span>: Instantly scaffold projects with pre-configured environments.</li>
+                                        <li><span class="bold">Reusable Assets</span>: Use pre-built components, hooks, and utility functions.</li>
+                                        <li><span class="bold">Customizable</span>: Easily adapt to your preferred tech stack or team standards.</li>
+                                        <li><span class="bold">Productivity-Boosting CLI</span>: Automate repetitive tasks like component generation, linting, formatting, and more.</li>
+                                        <li><span class="bold">Consistent Structure</span>: Enforces a clean and consistent folder layout and naming conventions.</li>
+                                    </ul>
 
                             </div>
 
@@ -81,14 +81,16 @@
                                 
                                 <h3 class="subsection-subtitle">1.3 Who is it for?</h3>
                                 
-                                <ul id="intro-list-two" class="list">
-                                    <li><span class="bold">Freelancers</span> who want to quickly spin up consistent, production-ready projects.</li>
-                                    <li><span class="bold">Agencies/Teams</span> looking for a standardized internal tool to reduce onboarding time.</li>
-                                    <li><span class="bold">Educators</span> or course creators needing consistent starter templates for front-end assignments.</li>
-                                    <li><span class="bold">Open-source developers</span> maintaining multiple projects with shared setup needs.</li>
-                                </ul>
+                                    <ul id="intro-list-two" class="list">
+                                        <li><span class="bold">Freelancers</span> who want to quickly spin up consistent, production-ready projects.</li>
+                                        <li><span class="bold">Agencies/Teams</span> looking for a standardized internal tool to reduce onboarding time.</li>
+                                        <li><span class="bold">Educators</span> or course creators needing consistent starter templates for front-end assignments.</li>
+                                        <li><span class="bold">Open-source developers</span> maintaining multiple projects with shared setup needs.</li>
+                                    </ul>
                             
                             </div>
+
+                                <hr class="small-divider" />
 
                             <div class="responsive-cards">
                                 <div class="table1-mobile-version">
@@ -496,11 +498,14 @@
 
                             </div>
 
+                                <hr class="small-divider" />
+
                             <div class="intro-cli-example example">
                                 
                                 <h3 class="subsection-subtitle">1.6 Example CLI Usage</h3>
 
                                     <pre><code>npx dev-toolkit init my-app --template react-tailwind</code></pre>
+
                                     <p>This command initializes a new project named <code>my-app</code> with a React + Tailwind CSS setup, including routing, pre-configured ESLint and Prettier rules, as well as a default folder structure.</p>
 
                             </div>
@@ -517,163 +522,186 @@
 
                         <div class="section-content">
 
-                            <div class="quickstart-overview">
+                            <div id="quickstart-overview" class="overview">
                                 
                                 <h3 class="subsection-subtitle">2.1 Overview</h3>
 
-                                <p>This section will walk you through installing <span class="bold">Dev Toolkit</span>, initializing your first project, and using the CLI to scaffold your first components. By the end, you will have a fully functioning starter project with best practices already in place.</p>
+                                    <p>This section will walk you through installing <span class="bold">Dev Toolkit</span>, initializing your first project, and using the CLI to scaffold your first components. By the end, you will have a fully functioning starter project with best practices already in place.</p>
 
                             </div>
+
+                                <hr class="small-divider" />
 
                             <div class="quickstart-prerequisites">
 
                                 <h3 class="subsection-subtitle">2.2 Prerequisites</h3>
 
-                                <p>To use Dev Toolkit, ensure you have the following installed:</p>
+                                    <p>To use Dev Toolkit, ensure you have the following installed:</p>
 
-                                    <ul id="prerequisites-list" class="list">
-                                        <li><span class="bold">Node.js</span> (v16 or higher recommended)</li>
-                                        <li><span class="bold">npm</span> or <span class="bold">yarn</span></li>
-                                        <li>Terminal or Command Prompt access</li>
-                                    </ul>
+                                        <ul id="prerequisites-list" class="list">
+                                            <li><span class="bold">Node.js</span> (v16 or higher recommended)</li>
+                                            <li><span class="bold">npm</span> or <span class="bold">yarn</span></li>
+                                            <li>Terminal or Command Prompt access</li>
+                                        </ul>
 
-                                <pre><code>node -v npm -v</code></pre>
-                                <p>🧠<i>Tip: Use <a href="https://github.com/nvm-sh/nvm">nvm</a> or <a href="https://github.com/Schniz/fnm">fnm</a> to manage Node versions.</i></p>
+                                        <pre><code>
+                                            node -v npm -v
+                                        </code></pre>
+                                    
+                                    <p>🧠<i>Tip: Use <a href="https://github.com/nvm-sh/nvm">nvm</a> or <a href="https://github.com/Schniz/fnm">fnm</a> to manage Node versions.</i></p>
 
                             </div>
+
+                                <hr class="small-divider" />
 
                             <div class="quickstart-install">
 
                                 <h3 class="subsection-subtitle">2.3 Installing Dev Toolkit</h3>
 
-                                <p>You can use <span class="bold">Dev Toolkit</span> via <code>npx</code> (no global install needed), or isntall it globally if you will be using it frequently.</p>
+                                    <p>You can use <span class="bold">Dev Toolkit</span> via <code>npx</code> (no global install needed), or install it globally if you will be using it frequently.</p>
 
-                                    <ul id="quickstart-install-list" class="list">
-                                        <li>
-                                            <h4>Option 1: Use with npx (no install)</h4>
-                                            <pre><code>npx dev-toolkit init my-project</code></pre>
-                                        </li>
-                                        <li>
-                                            <h4>Option 2: Install globally</h4>
-                                            <pre><code>npm install -g dev-toolkit</code></pre>
-                                        </li>
-                                        <li>
-                                            <h4>To verify installation:</h4>
-                                            <pre><code>dev-toolkit --version</code></pre>
-                                        </li>
-                                    </ul>
+                                        <ul id="quickstart-install-list" class="list">
+                                            <li>
+                                                <h4>Option 1: Use with npx (no install)</h4>
+                                                <pre><code>npx dev-toolkit init my-project</code></pre>
+                                            </li>
+                                            <li>
+                                                <h4>Option 2: Install globally</h4>
+                                                <pre><code>npm install -g dev-toolkit</code></pre>
+                                            </li>
+                                            <li>
+                                                <h4>To verify installation:</h4>
+                                                <pre><code>dev-toolkit --version</code></pre>
+                                            </li>
+                                        </ul>
 
-                                    <table class="table table2">
-                                        <caption><span class="bold">Available options</span></caption>
-                                        <thead>
-                                            <tr>
-                                            <th>Flag</th>
-                                            <th>Description</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                            <td><code>--template</code></td>
-                                            <td>Choose a starting stack (e.g., <code>react-ts</code>, <code>vue-basic</code>, <code>svelte-min</code>)</td>
-                                            </tr>
-                                            <tr>
-                                            <td><code>--features</code></td>
-                                            <td>Comma-separated list: <code>tailwind</code>, <code>eslint</code>, <code>prettier</code>, <code>husky</code>, etc.</td>
-                                            </tr>
-                                            <tr>
-                                            <td><code>--git</code></td>
-                                            <td>Initialize a Git repo automatically</td>
-                                            </tr>
-                                            <tr>
-                                            <td><code>--install</code></td>
-                                            <td>Auto-install dependencies after scaffolding</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                            <table class="table table2">
+                                                <caption><span class="bold">Available options</span></caption>
+                                                <thead>
+                                                    <tr>
+                                                    <th>Flag</th>
+                                                    <th>Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                    <td><code>--template</code></td>
+                                                    <td>Choose a starting stack (e.g., <code>react-ts</code>, <code>vue-basic</code>, <code>svelte-min</code>)</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td><code>--features</code></td>
+                                                    <td>Comma-separated list: <code>tailwind</code>, <code>eslint</code>, <code>prettier</code>, <code>husky</code>, etc.</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td><code>--git</code></td>
+                                                    <td>Initialize a Git repo automatically</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td><code>--install</code></td>
+                                                    <td>Auto-install dependencies after scaffolding</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         
                                     <p><i>✅ If no template is provided, you'll be prompted interactively.</i></p>
 
                             </div>
 
+                                <hr class="small-divider" />
+
                             <div class="intro-init-structure">
 
                                 <h3 class="subsection-subtitle">2.5 What You Get After Init</h3>
 
-                                <pre><code>
-                                    my-app/
-                                    ├── public/
-                                    ├── src/
-                                    │   ├── components/
-                                    │   ├── pages/
-                                    │   ├── hooks/
-                                    │   └── App.tsx
-                                    ├── .eslintrc.json
-                                    ├── .prettierrc
-                                    ├── tailwind.config.js
-                                    ├── package.json
-                                    └── .devtoolkitrc
-                                </code></pre>
+                                    <pre><code>
+                                        my-app/
+                                        ├── public/
+                                        ├── src/
+                                        │   ├── components/
+                                        │   ├── pages/
+                                        │   ├── hooks/
+                                        │   └── App.tsx
+                                        ├── .eslintrc.json
+                                        ├── .prettierrc
+                                        ├── tailwind.config.js
+                                        ├── package.json
+                                        └── .devtoolkitrc
+                                    </code></pre>
 
                             </div>
+
+                                <hr class="small-divider" />
 
                             <div class="quickstart-cli-scaffold">
 
                                 <h3 class="subsection-subtitle">2.6 Using the CLI to Scaffold Files</h3>
 
-                                <p>Once inside your project, use the Dev Toolkit CLI to quickly generate components, hooks, utilities, pages and services to accelerate your development.</p>
+                                    <p>Once inside your project, use the Dev Toolkit CLI to quickly generate components, hooks, utilities, pages and services to accelerate your development.</p>
 
-                                <p>For example, you can create a new button component or a custom hook with a single command.</p>
+                                    <p>For example, you can create a new button component or a custom hook with a single command.</p>
 
                             </div>
+
+                                <hr class="small-divider" />
 
                             <div class="quickstart-cli-example">
 
                                 <h4><span class="bold">Example: Generate a new UI component</span></h4>
 
-                                <pre><code>dev-toolkit generate component Button</code></pre>
+                                        <pre><code>dev-toolkit generate component Button</code></pre>
 
-                                <p>Creates the following files:</p>
+                                    <p>Creates the following files:</p>
             
-                                <pre><code>
-                                    src/components/Button/
-                                    ├── Button.tsx
-                                    ├── Button.module.scss
-                                    └── Button.test.tsx
-                                </code></pre>
+                                        <pre><code>
+                                            src/components/Button/
+                                            ├── Button.tsx
+                                            ├── Button.module.scss
+                                            └── Button.test.tsx
+                                        </code></pre>
 
                             </div>
+
+                                <hr class="small-divider" />
 
                             <div class="quickstart-cli-hook-example">
 
                                 <h4>Example: Generate a custom hook</h4>
 
-                                <pre><code>dev-toolkit generate gook useLocalStorage</code></pre>
+                                    <pre><code>dev-toolkit generate gook useLocalStorage</code></pre>
 
                             </div>
+
+                                <hr class="small-divider" />
 
                             <div class="quickstart-cli-run">
 
                                 <h3 class="subsection-subtitle">2.7 Run the Project</h3>
 
-                                <p>Once scaffolded, run the project using your framework's dev server.<br>
-                                If you are using React (default for most templates):</p>
+                                    <p>Once scaffolded, run the project using your framework's dev server.<br>
+                                    If you are using React (default for most templates):</p>
 
-                                <pre><code>npm run dev</code></pre>
+                                        <pre><code>
+                                            npm run dev
+                                        </code></pre>
 
-                                <p>Dev Toolkit auto-generates <code>dev</code>, <code>build</code>, <code>format</code> scripts in <code>package.json</code>.</p>
+                                    <p>Dev Toolkit auto-generates <code>dev</code>, <code>build</code>, <code>format</code> scripts in <code>package.json</code>.</p>
 
                             </div>
+
+                                <hr class="small-divider" />
 
                             <div class="quickstart-cli-format">
 
                                 <h3 class="subsection-subtitle">2.8 Optional: Format & Lint the Code</h3>
 
-                                <pre><code># Format all files using Prettier dev-toolkit Format<br># Run ESLint dev-toolkit lint
-                                </code></pre>
+                                        <pre><code># Format all files using Prettier dev-toolkit Format<br># Run ESLint dev-toolkit lint
+                                        </code></pre>
 
-                                <p>These commands use pre-configured rules included with your template unless overridden in <code>.devtoolkitrc</code>.</p>
+                                             <p>These commands use pre-configured rules included with your template unless overridden in <code>.devtoolkitrc</code>.</p>
 
                             </div>
+
+                                <hr class="small-divider" />
 
                             <div class="checklist">
 
@@ -703,6 +731,1331 @@
                             </div>
 
                         </div>
+
+                    </section>
+
+                <!-- Section 3: Features-->
+
+                    <section id="features" class="section section-features">
+
+                        <h2 class="section-subtitle"><span class="hidden-number">3.</span> Features</h2>
+
+                        <div class="section-content">
+
+                            <div class="features-intro">
+
+                                <p>The Dev Toolkit offers a set of essential features that accelerate development, enforce consistency, and reduce repetitive work. Each feature is modular, configurable and designed to integrate smoothly into modern front-end workflows.</p>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="features-cli-tooling">
+
+                                <h3 class="subsection-subtitle">3.1 CLI Tooling</h3>
+
+                                    <div id="cli-overview" class="overview">
+
+                                        <h4><span class="bold">Overview:</span></h4>
+
+                                            <p>The Dev Toolkit includes a command-line interface (<code>dev-toolkit</code>) that allows developers to perform common tasks such as generating files, running development scripts and initializing projects.</p>
+
+                                    </div>
+
+                                    <div class="capabilities">
+
+                                        <h4><span class="bold">Key Capabilities:</span></h4>
+
+                                            <ul id="capabilities-list" class="list">
+                                                <li>
+                                                    <span class="checkmark">✅</span> Generate components, utilities, hooks, pages and services
+                                                </li>
+                                                <li>
+                                                    <span class="checkmark">✅</span> Run formatting and linting tools
+                                                </li>
+                                                <li>
+                                                    <span class="checkmark">✅</span> Scaffold entire projects using templates
+                                                </li>
+                                                <li>
+                                                    <span class="checkmark">✅</span> Accept custom flags and override behaviors via configuration
+                                                </li>
+                                            </ul>
+
+                                    </div>
+
+                                    <div id="example-commands" class="example">
+
+                                        <h4><span class="bold">Example Commands:</span></h4>
+
+                                            <pre><code>
+                                                dev-toolkit generate component Card<br>
+                                                dev-toolkit generate hook useLocalStorage<br>
+                                                dev-toolkit lint<br>
+                                                dev-toolkit format
+                                            </code></pre>
+
+                                        <h4>Customization via <code>.devtoolkitrc</code>:</h4>
+
+                                            <pre><code>
+                                                {
+                                                    "componentPath": "src/ui",<br>
+                                                    "fileStyle": "kebab-case",<br>
+                                                    "style": "scss"
+                                                }
+                                            </code></pre>
+
+                                    </div>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="feature-project-scaffolding">
+
+                                <h3 class="subsection-subtitle">3.2 Project Scaffolding</h3>
+
+                                    <div id="scaffolding-overview" class="overview">
+
+                                        <h4><span class="bold">Overview:</span></h4>
+
+                                            <p>The <code>init</code> command bootstraps a complete project based on your selected template and tools. It automates setup for frameworks, file structure and tooling.</p>
+
+                                    </div>
+
+                                    <div id="usage-example" class="example">
+
+                                        <h4><span class="bold">Example Usage:</span></h4>
+
+                                            <pre><code>
+                                                dev-toolkit init my-app --template react-ts --features tailwind, eslint
+                                            </code></pre>
+
+                                    </div>
+
+                                    <div id="default-project-structure" class="structure">
+
+                                        <h4><span class="bold">Default Project Structure:</span></h4>
+
+                                            <pre><code>
+                                                my-app/
+                                                ├── src/
+                                                │   ├── components/
+                                                │   ├── pages/
+                                                │   └── styles/
+                                                ├── .devtoolkitrc
+                                                ├── tailwind.config.js
+                                                ├── .eslintrc.json
+                                                ├── package.json
+                                            </code></pre>
+
+                                                <table class="table table3">
+                                                    <caption><span class="bold">Available Templates:</span></caption>
+                                                        <thead>
+                                                            <tr>
+                                                            <th>Template ID</th>
+                                                            <th>Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <td><code>react-ts</code></td>
+                                                            <td>React with TypeScript</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <td><code>vue-basic</code></td>
+                                                            <td>Vue 3 with basic configuration</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <td><code>svelte-min</code></td>
+                                                            <td>Minimal Svelte + Vite setup</td>
+                                                            </tr>
+                                                        </tbody>
+                                                </table>
+
+                                    </div>
+
+                                    
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="feature-reusable-components">
+
+                                <h3 class="subsection-subtitle">3.3 Reusable Components</h3>
+
+                                    <div id="components-overview" class="overview">
+
+                                        <h4><span class="bold">Overview:</span></h4>
+
+                                            <p>A pre-built set of accessible UI components are included with Dev Toolkit. These can be used out of the box or extended to match your design system.</p>
+
+                                    </div>
+
+                                    <div id="component-usage-example" class="example">
+
+                                        <h4><span class="bold">Usage Example:</span></h4>
+
+                                            <pre><code>
+                                                import { Button } from 'dev-toolkit/ui';<br>
+                                                &lt;button variant="primary" 
+                                                onClick={submitForm}&gt;Submit&lt;/button&gt;
+                                            </code></pre>
+
+                                    </div>
+
+                                    <div class="components-options-list">
+
+                                        <h4><span class="bold">Available Options:</span></h4>
+
+                                            <ul class="list">
+                                                <li>
+                                                    <code>variant</code>: <code>primary</code>, <code>secondary</code>, <code>ghost</code>, <code>danger</code>
+                                                </li>
+                                                <li>
+                                                    <code>size</code>: <code>sm</code>, <code>md</code>, <code>lg</code>
+                                                </li>
+                                                <li>
+                                                    <code>loading</code>: <code>true</code> | <code>false</code>
+                                                </li>
+                                            </ul>
+
+                                    </div>
+
+                                    <div class="component-customization-list">
+
+                                        <h4><span class="bold">Component Customization</span></h4>
+
+                                            <ul class="list">
+                                                <li>
+                                                    Styles use CSS Modules or Tailwind
+                                                </li>
+                                                <li>
+                                                    Supports theming through CSS variables or framework integration
+                                                </li>
+                                            </ul>
+
+                                    </div>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="feature-custom-scripts">
+
+                                <h3 class="subsection-subtitle">3.4 Custom Scripts</h3>
+
+                                    <div id="scripts-overview" class="overview">
+
+                                        <h4><span class="bold">Overview:</span></h4>
+
+                                            <p>Dev Toolkit includes wrappers around common developer tools like ESLint, Prettier and your project's build system.</p>
+
+                                    </div>
+
+                                    <div id="included-commands" class="commands">
+
+                                        <h4><span class="bold">Included Commands:</span></h4>
+
+                                            <pre><code>
+                                                dev-toolkit lint<br>
+                                                dev-toolkit format<br>
+                                                dev-toolkit build
+                                            </code></pre>
+
+                                                <p>These scripts automatically detect your project structure and use the appropriate underlying tools.</p>
+
+                                    </div>
+
+                                    <div id="customization-options" class="customization">
+
+                                        <h5>Customization</h5>
+
+                                                <p>You can replace or extend these commands in <code>package.json</code> or via your configuration file.</p>
+
+                                    </div>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="feature-code-generators">
+
+                                <h3 class="subsection-subtitle">3.5 Code Generators</h3>
+
+                                    <div id="generators-overview" class="overview">
+
+                                        <h4><span class="bold">Overview:</span></h4>
+
+                                            <p>Use Dev Toolkit's generators to quickly scaffold new files with consistent structure and formatting.</p>
+
+                                    </div> 
+
+                                    <div class="generators-support-list">
+
+                                        <h4><span class="bold">Supported Types:</span></h4>
+
+                                            <ul id="support-generators-list" class="list">
+                                                <li>
+                                                    <code>component</code> — with style and test files
+                                                </li>
+                                                <li>
+                                                    <code>hook</code> — logic abstraction (React-specific)
+                                                </li>
+                                                <li>
+                                                    <code>service</code> — data/API layer
+                                                </li>
+                                                <li>
+                                                    <code>util</code> — helper functions
+                                                </li>
+                                                <li>
+                                                    <code>page</code> — routed views
+                                                </li>
+                                            </ul>
+
+                                    </div>
+
+                                    <div id="generator-support-example" class="examples">
+
+                                        <h4><span class="bold">Examples:</span></h4>
+
+                                            <pre><code>
+                                                dev-toolkit generate component modal<br>
+                                                dev-toolkit generate util debounce<br>
+                                                dev-toolkit generate page about
+                                            </code></pre>
+
+                                    </div>
+
+                                    <div id="generate-files-example">
+
+                                        <h4><span class="bold">Generated Files Example:</span></h4>
+
+                                            <pre><code>
+                                                src/components/Modal/
+                                                ├── Modal.tsx
+                                                ├── Modal.module.scss
+                                                └── Modal.test.tsx
+                                            </code></pre>
+
+                                    </div>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="feature-configuration-system">
+
+                                <h3 class="subsection-subtitle">3.6 Configuration System</h3>
+
+                                    <div id="configuration-overview" class="overview">
+
+                                        <h4><span class="bold">Overview:</span></h4>
+
+                                            <p>The <code>.devtoolkitrc</code> file is the central configuration file for customizing toolkit behavior.</p>
+
+                                    </div>
+
+                                    <div id="sample-configuration" class="sample">
+
+                                        <h4><span class="bold"></span>Sample Configuration:</h4>
+
+                                            <pre><code>
+                                                "componentPath": "src/components/common",
+                                                "fileStyle": "PascalCase",
+                                                "style": "css-module",
+                                                "useTypeScript": true
+                                            </code></pre>
+
+                                                <table class="table table4">
+                                                    <caption>Support Settings:</caption>
+                                                        <thead>
+                                                            <tr>
+                                                            <th>Key</th>
+                                                            <th>Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                            <td><code>componentPath</code></td>
+                                                            <td>Directory for generated components</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <td><code>fileStyle</code></td>
+                                                            <td>Naming format for files (e.g., <code>kebab-case</code>, <code>PascalCase</code>)</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <td><code>style</code></td>
+                                                            <td>Stylesheet type (<code>scss</code>, <code>css-module</code>, etc.)</td>
+                                                            </tr>
+                                                            <tr>
+                                                            <td><code>useTypeScript</code></td>
+                                                            <td>Enables/disables TypeScript-specific files</td>
+                                                            </tr>
+                                                        </tbody>
+                                                </table>
+
+                                                    <p>This allows you to shape the toolkit to match your team or personal workflow.</p>
+
+                                    </div>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="feature-plugin-system">
+
+                                <h3 class="subsection-subtitle">3.7 Plugin System</h3>
+
+                                    <div id="plugin-overview" class="overview">
+
+                                        <h4><span class="bold">Overview:</span></h4>
+
+                                            <p>Plugins allow you to extend Dev Toolkit with custom generators, commands or workflows.</p>
+
+                                    </div>
+
+                                    <div id="installation-example" class="example">
+
+                                        <h4><span class="bold">Installation Example</span></h4>
+
+                                            <pre><code>
+                                                dev-toolkit plugin add @your-org/dev-toolkit-plugin-graphql
+                                            </code></pre>
+
+                                    </div>
+
+                                    <div id="plugin-command" class="command">
+
+                                        <h4><span class="bold">Command Provided by Plugin:</span></h4>
+
+                                            <pre><code>
+                                                dev-toolkit generate gql service
+                                            </code></pre>
+
+                                    </div>
+
+                                    <div id="plugin-file-structure" class="structure">
+
+                                        <h4><span class="bold">Plugin File Structure</span></h4>
+
+                                            <pre><code>
+                                                my-plugin/
+                                                ├── index.js
+                                                ├── generators/
+                                                │   └── gql/
+                                                │       └── index.js
+                                            </code></pre>
+
+                                               <p>Plugins auto-register when installed and can be shared across teams or published to a registry like npm.</p> 
+
+                                    </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                <!-- Section 4: Configuration Reference -->
+
+                    <section id="config" class="section section-config">
+
+                        <h2 class="section-subtitle"><span class="hidden-number">4.</span> Configuration Reference</h2>
+
+                            <div class="section-content">
+
+                                <div class="config-intro">
+
+                                    <p>The <code>.devtoolkitrc</code> file enables deep customization of Dev Toolkit's behavior. Whether you are setting file naming conventions, changing generator output paths or toggling TypeScript support, this section explains every available option in detail.</p>
+
+                                    <p>Configuration is optional - but it unlocks advanced workflows, consistency across teams and automation that fits your preferences.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="config-list">
+
+                                    <h3 class="subsection-subtitle">4.1 Configuration File Format</h3>
+
+                                        <p>Dev Toolkit supports two formats for configuration:</p>
+
+                                            <ul id="configuration-list" class="list">
+                                                <li>
+                                                    <span class="checkmark">✅</span> <strong>JSON</strong> (default)
+                                                </li>
+                                                <li>
+                                                    <span class="checkmark">✅</span> <strong>YAML</strong> (just use <code>.devtoolkitrc.yml</code>)
+                                                </li>
+                                            </ul>
+
+                                </div>
+
+                                <div class="config-example">
+
+                                    <h4><span class="bold">Configuration Example</span> <code>.devtoolkitrc</code> (JSON):</h4>
+
+                                        <pre><code>
+                                            {
+                                                "componentPath": "src/components/shared",
+                                                "fileStyle": "PascalCase",
+                                                "style": "css-module",
+                                                "useTypeScript": true,
+                                                "defaultVariants": ["primary", "ghost"],
+                                                "test": true
+                                            }
+                                        </code></pre>     
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="configuration-options-table">
+
+                                    <h3 class="subsection-subtitle">4.2 Available Configuration Options</h3>
+
+                                        <table class="table table5">
+                                            <caption>Configuration Options:</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Key</th>
+                                                        <th>Type</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <code>componentPath</code>
+                                                        </td>
+                                                        <td>
+                                                            <code>string</code>
+                                                        </td>
+                                                        <td>
+                                                            Base path for generated component folders
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>
+                                                                fileStyle
+                                                            </code>
+                                                        </td>
+                                                        <td>
+                                                            <code>string</code>
+                                                        </td>
+                                                        <td>
+                                                            Naming convention: <code>
+                                                                PascalCase
+                                                            </code>, 
+                                                            <code>
+                                                                camelCase
+                                                            </code>, 
+                                                            <code>
+                                                                kebab-case
+                                                            </code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>style</code>
+                                                        </td>
+                                                    <td>
+                                                        <code>string</code>
+                                                    </td>
+                                                        <td>
+                                                            Style system used: <code>scss</code>, <code>css</code>, <code>css-module</code>, or <code>Tailwind</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>
+                                                                useTypeScript
+                                                            </code>
+                                                        </td>
+                                                        <td>
+                                                            <code>
+                                                                boolean
+                                                            </code>
+                                                        </td>
+                                                        <td>
+                                                            Generate 
+                                                            <code>.ts</code>/<code>.tsx</code> files instead of JS
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>
+                                                                defaultVariants
+                                                            </code>
+                                                        </td>
+                                                        <td>
+                                                            <code>array</code>
+                                                        </td>
+                                                        <td>
+                                                            Default UI component variants to include in scaffolds
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>test</code>
+                                                        </td>
+                                                        <td>
+                                                            <code>boolean</code>
+                                                        </td>
+                                                        <td>
+                                                            Whether to include a test file in generated components
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="configuration-customization-example">
+
+                                    <h3 class="subsection-subtitle">4.3 Customization Practice</h3>
+
+                                        <div class="custom-practice-list">
+                                            
+                                            <p>Let's say you want to:</p>
+
+                                            <ul id="practice-list" class="list">
+                                                <li>
+                                                    Use SCSS for styling
+                                                </li>
+                                                <li>
+                                                    Store components in <code>src/ui</code>
+                                                </li>
+                                                <li>
+                                                    Use <code>kebab-case</code> for all filenames
+                                                </li>
+                                                <li>
+                                                    Skip generating test files
+                                                </li>
+                                            </ul>
+
+                                        </div>
+
+                                        <div class="here-is-your-configuration">
+
+                                    <h4>Here is your configuration</h4>
+
+                                        <pre><code>
+                                            {
+                                                "componentPath": "src/ui",
+                                                "fileStyle": "kebab-case",
+                                                "style": "scss",
+                                                "test": false
+                                            }
+                                        </code></pre>
+
+                                        </div>
+
+                                        <div class="when-you-run">
+
+                                            <h4>When you run:</h4>
+
+                                                <pre><code>
+                                                    dev-toolkit generate component user-card
+                                                </code></pre>
+
+                                        </div>
+
+                                        <div class="dev-toolkit-will-create">
+
+                                            <h4>Dev Toolkit will Create</h4>
+
+                                                <pre><code>
+                                                    src/ui/user-card/
+                                                    ├── user-card.tsx
+                                                    └── user-card.scss
+                                                </code></pre>
+
+                                                    <p><span class="checkmark">✅</span> No test file will be created, and the component will use the specified file structure.</p>
+
+                                        </div>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="configuration-overrides">
+
+                                    <h3 class="subsection-subtitle">4.4 Configuration Overrides via CLI</h3>
+
+                                        <div class="cli-override-flags">
+
+                                            <h4><span class="bold">CLI Override Flags</span></h4>
+
+                                                <p>Some options in <code>.devtoolkitrc</code> can be temporarily overridden using CLI flags. This is useful for one-off scaffolds or experimentation.</p>
+
+                                        </div>
+
+                                        <div class="override-example example">
+
+                                            <h4><span class="bold">Example</span></h4>
+
+                                                <pre><code>dev-toolkit generate component Alert<br> --style tailwind<br> --test false
+                                                </code></pre>
+
+                                                    <p>In this example, even if your configuration file specifies a different style system or includes tests, the generated <code>Alert</code> component will use Tailwind CSS and skip the test file.</p>
+
+                                        </div>
+
+                                        <div class="overrides-list">
+                                        
+                                            <h4>Overrides:</h4>
+                                                
+                                                <ul>
+                                                    <li>
+                                                        <code>style</code> → <code>tailwind</code>
+                                                    </li>
+                                                    <li>
+                                                        <code>test</code> → <code>false</code> <br>
+                                                        Without changing your <code>.devtoolkitrc</code> file.
+                                                    </li>
+                                                </ul>
+                                        
+                                        </div>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="configuration-best-practices">
+
+                                    <h3 class="subsection-subtitle">4.5 Best Practices</h3>
+
+                                        <ul id="best-practice-list">
+                                            <li>
+                                                ✅ Keep your <code>.devtoolkitrc</code> file in the root directory of your project.
+                                            </li>
+                                            <li>
+                                                ✅Use JSON for strict syntax; use YAML for readability if preferred.
+                                            </li>
+                                            <li>
+                                                ✅ Store reusable configs in templates if working across multiple projects.
+                                            </li>
+                                            <li>
+                                                🩺 Validate configuration by running <code>dev-toolkit doctor</code> (if supported in your version).
+                                            </li>
+                                        </ul>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="config-troubleshooting">
+
+                                    <h3 class="subsection-subtitle">4.6 Troubleshooting Configuration</h3>
+
+                                        <table class="table table6">
+                                            <caption>Common Issues and Fixes:</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Problem</th>
+                                                        <th>Likely Cause</th>
+                                                        <th>Fix</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            Config is ignored
+                                                        </td>
+                                                        <td>
+                                                            File not in root directory or wrongly named
+                                                        </td>
+                                                        <td>
+                                                            Ensure file is <code>.devtoolkitrc</code> or <code>.devtoolkitrc.json</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            CLI uses wrong style or path<
+                                                            /td>
+                                                        <td>
+                                                            Conflict between CLI flags and config
+                                                        </td>
+                                                        <td>
+                                                            Check if a flag is overriding the config
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Component names look incorrect
+                                                        </td>
+                                                        <td>
+                                                            Wrong <code>fileStyle</code> format in config
+                                                        </td>
+                                                        <td>
+                                                            Switch to preferred case convention
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+
+                                </div>
+
+                            </div>
+
+                    </section>
+
+                <!-- Section 5: Component Library -->
+
+                    <section id="component-library" class="section section-component-library">
+
+                        <h2 class="section-title"><span class="hidden-number">5.</span> Component Library</h2>
+
+                            <div class="section-content">
+
+                                <div class="library-intro">
+
+                                    <h3 id="library-intro-header">Introduction to Component Library</h3>
+
+                                        <p>The <span class="bold">Component Library</span> in Dev Toolkit is a collection of reusable, accessible and theme-ready UI components designed to help you build interfaces faster and more consistently. These components can be used as-is or customized to match your project's identity.</p>
+
+                                        <p>Whether you are building a dashboard, marketing site, or application UI, the built-in components save time and reduce repetition.</p>
+
+                                </div>
+
+                                <div class="component-overview">
+
+                                    <h3 class="subsection-subtitle">5.1 Overview of Component System</h3>
+
+                                        <p>The library is modular and lightweight. Components are:</p>
+
+                                            <ul id="components-features-list" class="list">
+                                                <li>
+                                                    Built with accessibility best practices (ARIA, keyboard navigation)
+                                                </li>
+                                                <li>
+                                                    Theme-aware (supports CSS variables or Tailwind)
+                                                </li>
+                                                <li>
+                                                    Compatible with TypeScript or JavaScript
+                                                </li>
+                                                <li>
+                                                    Styled using CSS Modules, SCSS, or Tailwind depending on your config
+                                                </li>
+                                                <li>
+                                                    Automatically documented via IntelliSense (if TypeScript is enabled)
+                                                </li>
+                                                <li>
+                                                    Tree-shakeable to keep your bundles lean
+                                                </li>
+                                                <li>
+                                                    Easily customizable via component props and theming
+                                                </li>
+                                            </ul>
+
+                                        <p>All components are lacated in the <code>dev-toolkit/ui</code> package after initialization and can be imported individually.</p>
+
+                                        <h4>For example:</h4>
+
+                                                <pre><code>
+                                                    
+                                                    import { Button } from 'dev-toolkit/ui';
+
+                                                    function MyComponent() {
+                                                        return &lt;Button variant="primary"&gt;Click me&lt;/Button&gt;;
+                                                    }
+                                                </code></pre>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="available-components">
+
+                                    <h3>5.2 Available Core Components</h3>
+
+                                        <table class="table table7">
+                                            <caption>Core UI Components:</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Component</th>
+                                                        <th>Description</th>
+                                                        <th>Customizable Props</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <code>Button</code>
+                                                        </td>
+                                                        <td>
+                                                            Reusable button component with variants and sizes for flexible UI controls
+                                                        </td>
+                                                        <td>
+                                                            <code>variant</code>, <code>size</code>, <code>loading</code>, <code>type</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>Input</code>
+                                                        </td>
+                                                        <td>
+                                                            Text input field with labels and built-in validation support for forms
+                                                        </td>
+                                                        <td>
+                                                            <code>label</code>, <code>error</code>, <code>type</code>, <code>value</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>Modal</code>
+                                                        </td>
+                                                        <td>
+                                                            Dialog container with overlay and close control for modal interactions
+                                                        </td>
+                                                        <td>
+                                                            <code>isOpen</code>, <code>onClose</code>, <code>title</code>, <code>size</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>Card</code>
+                                                        </td>
+                                                        <td>
+                                                            Flexible container for displaying grouped content with styling options
+                                                        </td>
+                                                        <td>
+                                                            <code>shadow</code>, <code>border</code>, <code>header</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>Toast</code>
+                                                        </td>
+                                                        <td>
+                                                            Notification component for success, error, and informational messages
+                                                        </td>
+                                                        <td>
+                                                            <code>type</code>, <code>message</code>, <code>duration</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>Spinner</code>
+                                                        </td>
+                                                        <td>
+                                                            Loader animation for async operations to indicate progress
+                                                        </td>
+                                                        <td>
+                                                            <code>size</code>, <code>color</code>, <code>inline</code>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>FormGroup</code>
+                                                        </td>
+                                                        <td>
+                                                            Layout helper to group label, input, and help text for better form UX
+                                                        </td>
+                                                        <td>
+                                                            <code>label</code>, <code>helpText</code>, <code>required</code>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+
+                                        <div class="component-library-notes">
+
+                                            <h4>Accessibility & Best Practices:</h4>
+
+                                                <p>All components follow accessibility standards including ARIA roles, keyboard navigation and focus management to ensure inclusivity.</p>
+
+                                            <h4>Customizable Themes:</h4>
+
+                                                <p>Easily adapt components via CSS variables or Tailwind configuration to match your brand's look and feel.</p>
+
+                                            <h4>Extensibility:</h4>
+
+                                                <p>Additional components can be added via <em>generators</em> or <em>plugins</em>, enabling your toolkit to grow with your needs.</p>
+
+                                        </div>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="component-usage">
+
+                                    <h3 class="subsection-subtitle">5.3 Using a Component</h3>
+
+                                        <p>AFter initializing your project with a template that includes the component library, usage is as simple as importing the desired component.</p>
+
+                                            <div class="example component-usage-example">
+
+                                                <h4><span class="bold">Example: Button</span></h4>
+
+                                                    <pre><code>
+                                                        import { Button } from 'dev-toolkit/ui';
+
+                                                        &lt;Button variant="primary" onClick={handleSubmit}&gt;Submit&lt;/Button&gt;
+                                                    </code></pre>
+
+                                            </div>
+
+                                            <div class="component-props">
+
+                                                <h4><span class="bold">Available Props</span></h4>
+
+                                                    <pre><code>
+                                                        interface ButtonProps {
+                                                                variant?: 'primary' | 'secondary' | 'ghost' | 'danger';
+                                                                size?: 'sm' | 'md' | 'lg';
+                                                                loading?: boolean;
+                                                                onClick?: () => void;
+                                                                disabled?: boolean;
+                                                                type?: 'button' | 'submit' | 'reset'
+                                                        }
+                                                    </code></pre>
+
+                                                        <p>Use these props to customize the button's appearance and behavior, allowing consistent styling across your app.</p>
+
+                                            </div>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="component-styling">
+
+                                    <h3 class="subsection-subtitle">5.4 Component Styling Options</h3>
+
+                                        <p>Component styles respect your Dev Toolkit configuration settings:</p>
+
+                                            <ul id="component-styling-list" class="list">
+                                                <li>
+                                                    If <code>style</code> is set to <code>tailwind</code>, components use Tailwind utility classes.
+                                                </li>
+                                                <li>
+                                                    If set to <code>css-module</code>, they use scoped CSS modules for modular styles.
+                                                </li>
+                                                <li>
+                                                    If set to <code>scss</code>, they include individual <code>.scss</code> files per component.
+                                                </li>
+                                            </ul>
+
+                                            <div class="example styling-examples">
+
+                                                <h4><span class="bold">Example: CSS Module</span></h4>
+
+                                                    <pre><code>
+                                                        import styles from './Button.module.css';
+
+                                                        &lt;button className={styles.primary}&gt;Click Me&lt;/button&gt;
+                                                    </code></pre>
+
+                                                <h4><span class="bold">Example: Tailwind</span></h4>
+
+                                                    <pre><code>
+                                                        &lt;button class="bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700"&gt;
+                                                    </code></pre>
+
+                                            </div>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="theming-support">
+
+                                    <h3>5.5 Theming Support</h3>
+
+                                        <p>The default components support flexible theming in two main ways, allowing you to easily adapt the UI to your brand or project style.</p>
+
+                                            <div class="theme-styling-option-1">
+
+                                                <h4><span class="bold">Option 1: CSS Variables (recommended for custom themes</span></h4>
+
+                                                    <p>Define theme colors using CSS variables for dynamic, runtime theming. This method works great with custom themes and runtime switching.</p>
+
+                                                    <pre><code>
+                                                        :root {
+                                                            --btn-primary-bg: #2563eb;
+                                                            --btn-primary-text: #ffffff;
+                                                        }
+
+                                                        .button {
+                                                            background-color: var(--btn-primary-bg);
+                                                            color: var(--btn-primary-text);
+                                                        }
+                                                    </code></pre>
+
+                                            </div>
+
+                                            <div class="theme-styling-option-2">
+
+                                                <h4><span class="bold">Option 2: Tailwind (via Tailwind config)</span></h4>
+
+                                                    <p>Extend the Tailwind config to include yhour theme colors, leveraging Tailwind's utility classes and variants.</p>
+
+                                                        <pre><code>
+                                                            module.exports = {
+                                                                theme: {
+                                                                    extend: {
+                                                                        colors: {
+                                                                            primary: '#2563eb',
+                                                                            secondary: '#64748b',
+                                                                        },
+                                                                    },
+                                                                },
+                                                            };
+                                                        </code></pre>
+
+                                                    <p><em>Tip:</em> You can combine both methods for maximum flexibility - use CSS variables for dynamic runtime changes and Tailwind for static utility-based styling.</p>
+
+                                            </div>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="accessibility">
+
+                                    <h3>5.6 Accessibility Features</h3>
+
+                                        <p>Each component is thoughtfully designed to ensure accessibility compliance and an inclusive user experience:</p>
+
+                                            <div class="accessibility-features">
+
+                                                <h4>Accessibility List</h4>
+
+                                                    <ul id="accessibilities-features-list" class="list">
+                                                        <li>
+                                                            Uses appropriate semantic HTML elements (<code>&lt;button&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;dialog&gt;</code>, etc.)
+                                                        </li>
+                                                        <li>
+                                                            Includes necessary <code>aria-*</code> attributes to improve screen reader support
+                                                        </li>
+                                                        <li>
+                                                            Manages focus and supports keyboard navigation for interactive components like <code>Modal</code> and <code>Toast</code>
+                                                        </li>
+                                                        <li>
+                                                            Supports screen-reader-only text via <code>sr-only</code> utility classes
+                                                        </li>
+                                                    </ul>
+
+                                            </div>
+
+                                            <div class="example accessibility-example">
+
+                                                <h4><span class="bold">Example: Accessible Modal</span></h4>
+
+                                                    <pre><code>
+                                                        &lt;Modal isOpen=true onClose={closeModal} title="Settings"&gt;
+
+                                                        &lt;p&gt;Configure your preferences here.&lt;/p&gt;
+
+                                                        &lt;/Modal&gt;
+                                                    </code></pre>
+
+                                            </div>
+
+                                            <div class="backend-accessibility">
+
+                                                <h4>Accessibility on the backend</h4>
+
+                                                    <ul id="backend-accessibility-features-list" class="list">
+                                                        <li>
+                                                            <code>aria-modal="true"</code> to indicate modal behavior
+                                                        </li>
+                                                        <li>
+                                                            <code>role="dialog"</code> for proper landmark role
+                                                        </li>
+                                                        <li>
+                                                            Focus trap within the modal to prevent keyboard focus from escaping
+                                                        </li>
+                                                        <li>
+                                                            ESC key handling to close the modal for easy dismissal
+                                                        </li>
+                                                    </ul>
+
+                                            </div>"
+
+                                        <p><em>Accessibility is a priority to ensure all users can interact with your UI seamlessly and confidently.</em></p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="component-extension">
+
+                                    <h3>5.7 Extending the Component Library</h3>
+
+                                        <div class="create-custom-components">
+
+                                            <h4><span class="bold">Creating Custom Components</span></h4>
+
+                                                <p>Dev Toolkit empowers you to create custom components effortlessly using the CLI. This helps maintain consistency and speeds up your development workflow.</p>
+
+                                                <p>Use the following command to generate a new component scaffold:</p>
+
+                                                    <pre><code>dev-toolkit generate component NavBar</code></pre>
+
+                                                <p><strong>This command creates a ready-to-use component structure:</strong></p>
+
+                                                    <pre><code>
+                                                        src/components/NavBar/
+                                                        ├── NavBar.tsx
+                                                        ├── NavBar.module.scss
+                                                        └── NavBar.test.tsx
+                                                    </code></pre>
+
+                                        </div>
+
+                                        <div class="Override-or-extend-existing-components">
+
+                                            <h4><span class="bold">Override or extend existing components</span></h4>
+
+                                                <p>If you need to customize or enhance the built-in components, simply copy them into your projects's source folders. Then modify styles, logic or add new props as needed. All while maintaining compatibility with Dev Toolkit's systems.</p>
+
+                                                    <h5>Tips for Extending Components</h5>
+
+                                                        <ul id="extending-components-tips-list" class="list">
+                                                            <li>
+                                                                Follow the existing file naming conventions to stay consistent with your project’s config.
+                                                            </li>
+                                                            <li>
+                                                                Leverage TypeScript typings for safer, more predictable component modifications.
+                                                            </li>
+                                                            <li>
+                                                                Use CSS Modules or Tailwind classes based on your styling setup for seamless theming.
+                                                            </li>
+                                                            <li>
+                                                                Write or update unit tests alongside your component changes to ensure reliability.
+                                                            </li>
+                                                            <li>
+                                                                Document your custom components and props for better team collaboration and IntelliSense support.
+                                                            </li>
+                                                        </ul>
+
+                                        </div>
+
+                                        <p>Extending the component library gives you the flexibility to adapt Dev Toolkit precisely to your project's unique needs, while still benefiting from its powerful core foundation.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="component-testing">
+
+                                    <h3>5.8 Component Testing</h3>
+
+                                        <p>Each component supports automated test generation if <code>test: true</code> is set in your <code>.devtoolkitrc</code> configuration.</p>
+
+                                            <div class="example component-testing-example">
+
+                                                <h4><span class="bold">Example:</span> <code>Button.test.tsx</code></h4>
+
+                                                    <pre><code>
+                                                            import { render, screen } from '@testing-library/react';
+                                                            import { Button } from 'dev-toolkit/ui';
+
+                                                            test('renders primary button', () =&gt; {
+                                                            render(&lt;Button variant="primary"&gt;Submit&lt;/Button&gt;);
+                                                            expect(screen.getByText('Submit')).toBeInTheDocument();
+                                                        }); 
+                                                    </code></pre>
+
+                                            </div>
+
+                                            <div class="testing-features">
+
+                                                <h4>Testing Features</h4>
+
+                                                    <ul id="component-testing-features-list" class="list">
+                                                        <li>
+                                                            Built-in Jest support out of the box
+                                                        </li>
+                                                        <li>
+                                                            Sample utilities for mocking component props
+                                                        </li>
+                                                        <li>
+                                                            ARIA role checks to ensure accessibility compliance
+                                                        </li>
+                                                        <li>
+                                                            Supports async testing for event handlers and effects
+                                                        </li>
+                                                        <li>
+                                                            Easily integrates with popular CI/CD pipelines
+                                                        </li>
+                                                    </ul>
+
+                                            </div>
+
+                                            <div class="component-testing-best-practices">
+
+                                            <h4>Best Practices for Testing Components</h4>
+
+                                                <ul id="components-testing-best-practices-list" class="list">
+                                                    <li>
+                                                        Write tests alongside your components for better maintenance
+                                                    </li>
+                                                    <li>
+                                                        Use descriptive test names for clarity
+                                                    </li>
+                                                    <li>
+                                                        Test user interactions and accessibility features
+                                                    </li>
+                                                    <li>
+                                                        Run <code>dev-toolkit test</code> or integrate with <code>npm test</code> for seamless workflows
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+
+                                        <p>Testing your components thoroughly ensures stability and confidence as your application scales.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="component-usage-guidance">
+
+                                    <h3>5.9 When to Use Built-In vs Custom</h3>
+
+                                        <table class="table table8">
+                                            <caption>Choosing Between Built-In Components and Custom Solutions</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Use Built-In When…</th>
+                                                        <th>Use Custom When…</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td>You want consistency and quick layout</td>
+                                                        <td>You have a unique design system</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Accessibility is a top priority</td>
+                                                        <td>You need a radically different interaction pattern</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>You're prototyping or in early dev phase</td>
+                                                        <td>You're building a full-brand design system</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>You're working across multiple projects</td>
+                                                        <td>You're using a third-party UI library (e.g., MUI)</td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+
+                                        <p>Choosing the right approach helps you balance speed, maintainability and brand uniqueness in your UI development.</p>
+
+                                </div>
+
+                            </div>
 
                     </section>
                 
