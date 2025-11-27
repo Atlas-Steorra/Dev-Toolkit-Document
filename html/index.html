@@ -2058,6 +2058,430 @@
                             </div>
 
                     </section>
+
+                <!-- Section 6: Utilities -->
+
+                    <section id="utilities" class="section section-utilities">
+
+                        <h2 class="section-title"><span class="hidden-number">6.</span> Utilities</h2>
+
+                            <div class="section-content">
+
+                                <div class="utilities-overview">
+
+                                    <h3>Utilities Overview</h3>
+
+                                        <p>The <span class="bold">Dev Toolkit Utility Library</span> includes a set of ready-to-use, framework-agnostic helper functions that cover frequent development needs. These utilities are lightweight, tested and follow predictable naming conventions to encourage consistency across projects.</p>
+
+                                        <p>Designed to work with <strong>React</strong>, <strong>Vue</strong>, <strong>Svelte</strong> or <strong>vanilla JavaScript</strong> projects. Utilities can be imported directly from <code>dev-toolkit/utils</code> or generated using the CLI.</p>
+
+                                        <p>Whether you are formatting data, manipulating arrays, or working with the DOM. These helper functions allow you to write cleaner, faster code with minimal setup.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="utilities-how-to">
+
+                                    <h3 class="subsection-subtitle">6.1 How to Use Utilities</h3>
+
+                                        <div class="utility-location-description">
+
+                                            <h4><span class="bold">Location of Utilities</span></h4>
+
+                                                <p>Utilities are located in the <code>src/utils/</code> directory by default and are written in either <span class="bold">JavaScript</span> or <span class="bold">TypeScript</span> based on your project setup.</p>
+
+                                                <p>Each utility is modular, tree-shakeable and designed for easy reuse across your app's logic, UI behaviors and API interactions.</p>
+
+                                        </div>
+
+                                        <div class="utility-example">
+
+                                            <h4><span class="bold">Example: Using a Utility Function</span></h4>
+
+                                                <pre><code>
+                                                    import { debounce } from 'dev-toolkit/utils';
+
+                                                    const handleInput = debounce((vlaue) =&gt; {
+                                                        console.log('Searching for:', value);
+                                                    }, 300);  
+                                                </code></pre>
+
+                                                    <p>This <code>debounce</code> function waits until the user stops typing for <code>300ms</code> before executing the search logic - great for performance in input-heavy UIs.</p>
+
+                                        </div>
+
+                                        <div class="utility-generation">
+
+                                            <h4><span class="bold">Generating Your Own Utility</span></h4>
+
+                                                <pre><code>dev-toolkit generate util slugify</code></pre>
+
+                                                    <p>This command scaffolds a new utility file using your config:</p>
+
+                                                <pre><code>src/utils/slugify.ts</code></pre>
+
+                                                    <p>From here, you can begin writing a reusable helper fucntion like a slug generator, formatter or validator.</p>
+
+                                        </div>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="included-utility-functions">
+
+                                    <h3 class="subsection-subtitle">6.2 Included Utility Functions</h3>
+
+                                        <p>Below is a comprehensive list of built-in utility functions and what they do. These helpers are framework-agnostic and work in and modern JavaScript project.</p>
+
+                                            <div class="example utility-examples">
+
+
+                                                <div class="utility-example-1">
+
+                                                    <code>debounce(func, delay)</code>
+
+                                                        <p><span class="bold">Purpose:</span><br>
+                                                        Delays the execution of a function until a certain time has passed since its last invocation.</p>
+
+                                                        <p><span class="bold">Use Case:</span><br>
+                                                        Prevent multiple rapid API calls during user input.</p>
+
+                                                            <h4><span class="bold">Example:</span></h4>
+
+                                                                <pre><code> 
+                                                                    const handleSearch = debounce(query =&gt; fetchData(query), 300);
+                                                                </code></pre>
+
+                                                </div>
+
+                                                <div class="utility-example-2">
+
+                                                    <code>throttle(func, delay)</code>
+
+                                                        <p><span class="bold">Purpose:</span><br>
+                                                        Limits the rate at which a function can be called.</p>
+
+                                                        <p><span class="bold">Use Case:</span><br>
+                                                        Useful for scroll or resize events.</p>
+
+                                                            <h4><span class="bold">Example:</span></h4>
+
+                                                                <pre><code>
+                                                                    const handleScroll = throttle(() =&gt; { console.log('user is scrolling...'); }, 200);
+                                                                </code></pre>
+
+                                                </div>
+
+                                                <div class="utility-example-3">
+
+                                                    <code>capitalize(string)</code>
+
+                                                        <p><span class="bold">Purpose:</span><br>
+                                                        Converts a string into a URL-friendly slug.</p>
+
+                                                        <p><span class="bold">Use Case:</span> Useful for page routing, IDs or blog URLs.</p>
+
+                                                            <h4><span class="bold">Example:</span></h4>
+
+                                                                <pre><code>
+                                                                    slugify('Hello World') // "hello-world"
+                                                                </code></pre>
+
+                                                </div>
+
+                                                <div class="utility-example-4">
+
+                                                    <code>slugify(string)</code>
+
+                                                        <p><span class="bold">Purpose:</span><br>
+                                                        Converts a string into a URL-friendly slug.</p>
+
+                                                        <p><span class="bold">Use Case:</span><br>
+                                                        Useful for page routing, IDs or blog URLs.</p>
+
+                                                            <h4><span class="bold">Example:</span></h4>
+
+                                                                <pre><code>
+                                                                    slugify('Hello World') // "hello-world"
+                                                                </code></pre>
+
+                                                </div>
+
+                                                <div class="utility-example-5">
+
+                                                    <code>formatDate(date, format?)</code>
+
+                                                        <p><span class="bold">Purpose:</span><br>
+                                                        Formats a date object to a readable string.</p>
+
+                                                        <p><span class="bold">Use Case:</span><br>
+                                                        Display readable timestamps or dates.</p>
+
+                                                            <h4><span class="bold">Example:</span></h4>
+
+                                                                <pre><code>formatDate(new Date(), 'YYYY-MM-DD') // "2025-07-23"</code></pre>
+
+                                                                    <div class="utility-format-support-list">
+
+                                                                        <h5><span class="bold">Supported Formats:</span></h5>
+
+                                                                            <ul id="utility-format-support-list" class="list">
+                                                                                <li><code>YYYY-MM-DD</code></li>
+                                                                                <li><code>MM/DD/YYYY</code></li>
+                                                                                <li><code>full</code> (e.g., "July 23, 2025")</li>
+                                                                            </ul>
+
+                                                                    </div>
+
+                                                </div>
+
+                                                <div class="utility-example-6">
+
+                                                    <code>isEmail(string)</code>
+
+                                                        <p><span class="bold">Purpose:</span><br>
+                                                        Validates whether a string is in email format.</p>
+
+                                                        <p><span class="bold">Use Case:</span><br>
+                                                        Form validation.</p>
+
+                                                            <h4><span class="bold">Example:</span></h4>
+
+                                                                <pre><code>isEmail('user@example.com') // true</code></pre>
+
+                                                </div>
+
+                                                <div class="utility-example-7">
+
+                                                    <code>clamp(value, min, max)</code>
+
+                                                        <p><span class="bold">Purpose:</span><br>
+                                                        Restricts a number within a specified range.</p>
+
+                                                        <p><span class="bold">Use Case:</span><br>
+                                                        Enforcing UI limits (e.g. slider, zoom levels).</p>
+
+                                                            <h4><span class="bold">Example:</span></h4>
+
+                                                                <pre><code>clamp(105, 0, 100) // 100</code></pre>
+
+                                                </div>
+
+                                                <div class="utility-example-8">
+
+                                                    <code>uniqueId(prefix?)</code>
+
+                                                        <p><span class="bold">Purpose:</span><br>
+                                                        Generates a unique ID string with an optional prefix.</p>
+
+                                                        <p><span class="bold">Use Case:</span><br>
+                                                        Useful for keys, accessibility attributes or IDs.</p>
+
+                                                            <h4><span class="bold">Example:</span></h4>
+
+                                                                <pre><code>uniqueId('input') // "input-af6a2"</code></pre>
+
+                                                </div>
+
+                                                <div class="utility-example-9">
+
+                                                    <code>mergeDeep(target, source)</code>
+
+                                                        <p><span class="bold">Purpose:</span><br>
+                                                        Recursively merges two objects.</p>
+
+                                                        <p><span class="bold">Use Case:</span><br>
+                                                        Combine default configuration with overrides.</p>
+
+                                                            <h4><span class="bold">Example:</span></h4>
+
+                                                                <pre><code>mergeDeep(defaults, userSettings)</code></pre>
+
+                                                </div>
+
+                                                <div class="utility-example-10">
+
+                                                    <code>sleep(ms)</code>
+
+                                                        <p><span class="bold">Purpose:</span><br>
+                                                        Returns a promise that resolves after a specified delay.</p>
+
+                                                        <p><span class="bold">Use Case:</span><br>
+                                                        Useful in async flows or testing delays.</p>
+
+                                                            <h4><span class="bold">Example:</span></h4>
+
+                                                                <pre><code>await sleep(500);</code></pre>
+
+                                                </div>
+
+                                            </div>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="utility-categories">
+
+                                    <h3 class="section-subtitle">6.3 Utility Categories</h3>
+
+                                        <p>Utilities are organized into categories based on their primary function, making it easy to find and use the right helper for your needs.</p>
+
+                                            <table class="table table9">
+                                                <caption id="utility-categories-table">Utility Categories Table</caption>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Category</th>
+                                                            <th>Included Functions</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Performance</td>
+                                                            <td><code>debounce</code>, <code>throttle</code>, <code>sleep</code></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>String Handling</td>
+                                                            <td><code>capitalize</code>, <code>slugify</code>, <code>uniqueId</code>, <code>isEmail</code></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Date Utilities</td>
+                                                            <td><code>formatDate</code></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Math</td>
+                                                            <td><code>clamp</code></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Object Helpers</td>
+                                                            <td><code>mergeDeep</code></td>
+                                                        </tr>
+                                                    </tbody>
+                                            </table>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="utility-extensions">
+
+                                    <h3>6.4 Extending the Utility Library</h3>
+
+                                        <div class="utility-extensions-overview">
+
+                                            <h4><span class="bold">Utility Extensions Overview</span></h4>
+
+                                                <p>you can generate your own utilities using the CLI:</p>
+
+                                                    <pre><code>dev-toolkit generate util toCurrency</code></pre>
+
+                                                <p>This will scaffold a new utility with a standard structure and optional test file:</p>
+
+                                                    <pre><code>src/utils/toCurrency.ts</code></pre>
+
+                                            <h4><span class="bold">Example Custom Utility</span></h4>
+
+                                                    <pre><code>
+                                                            export function toCurrency(value: number, currency = 'USD') {
+                                                                return new Intl.NumberFormat('en-US', {
+                                                                style: 'currency',
+                                                                currency
+                                                            }).format(value);    
+                                                        }
+                                                    </code></pre>
+
+                                        </div>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="utility-test-and-practice-list">
+
+                                    <h3>6.5 Testing and Best Practices</h3>
+
+                                        <ul id="utility-test-and-practice-list" class="list">
+                                            <li>Keep utilities <span class="bold">pure</span> (no side effects) for predictable results.</li>
+                                            <li>Use <span class="bold">TypeScript</span> for better IntelliSense, type safety, and easier maintenance.</li>
+                                            <li>Organize utilities by category (string, math, validation, etc.) for clarity.</li>
+                                            <li>Write unit tests for each utility — Dev Toolkit can auto-generate these tests to help you get started.</li>
+                                        </ul>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="using-toolkit-utilities-list">
+
+                                    <h3>6.6 When to Use Toolkit Utilities</h3>
+
+                                        <p>Use dev toolkit's utilities when:</p>
+
+                                            <ul id="using-toolkit-utilities-list" class="list">
+                                                <li>You want clean, reusable logic without reinventing the wheel</li>
+                                                <li>You want consistent implementations across projects</li>
+                                                <li>You want test-ready, type-safe helpers for common frontend tasks</li>
+                                            </ul>
+
+                                        <p>Feel free to use or override these utilities in your own <code>utils/</code> folder as your project evolves.</p>
+
+                                </div>
+
+                            </div>
+
+                    </section>
+
+                <!-- Section 7: Hooks -->
+
+                    <section id="hooks" class="section section-hooks">
+
+                        <h2 class="section-title"><span class="hidden-number">7.</span> Hooks</h2>
+
+                            <div class="section-content">
+
+                                <div class="hooks-overview">
+
+                                    <h4><span class="bold">Hooks Overview</span></h4>
+
+                                        <p>The <span class="bold">Dev Toolkit Hooks</span> provides reusable logic abstractions for managing state, effects and more within your components. Designed to be lightweight and flexiable, they help you streamline your React workflows with minimal boilerplates.</p>
+
+                                        <p>Whether you need to manage async data fetching, handle form state or add custom behaviors, Dev Toolkit hooks are built with performance and ease of use in mind.</p>
+
+                                        <p>Dev Toolkit provides a set of <span class="bold">custom React hooks</span> that simplify state management, storage, user input and more. These hooks are designed to follow best practices for reusability, composability and accessibility in modern React applications.</p>
+
+                                        <p>Hooks can be scaffolded using the CLI and are automatically placed in the <code>src/hooks</code> directory by default. Each hook is fully typed if TypeScript is enabled and includes optional test scaffolding if required.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="What-are-custom-hooks">
+
+                                    <h3>7.1 What are Custom Hooks?</h3>
+
+                                        <p>Custom hooks are JavaScript functions that use built-in React hooks (like <code>useState</code>, <code>useEffect</code>, etc.) to encapsulate and reuse logic across components.</p>
+
+                                        <p>They allow you to bundle related logic that an be shared across multiple components, making your codebase <span class="bold">DRY (Don't Repeat Yourself)</span> and easier to maintain and test.</p>
+
+                                            <h4><span class="bold">Why use them?</span></h4>
+
+                                                <ul id="why-use-hooks-list" class="list">
+                                                    <li>Extract complex logic from components</li>
+                                                    <li>Keep components focused on rendering</li>
+                                                    <li>Promote code reuse and separation of concerns</li>
+                                                    <li>Improve readability and maintainability</li>
+                                                </ul>
+
+                                                    <p>For example, a <code>useFetch</code> hook can encapsulate API calls and loading states, allowing components to consume data without managing the underlying details.</p>
+
+                                </div>
+
+                            </div>
+
+                    </section>
                 
             </article>
         </main>
