@@ -504,7 +504,13 @@
                                 
                                 <h3 class="subsection-subtitle">1.6 Example CLI Usage</h3>
 
-                                    <pre><code>npx dev-toolkit init my-app --template react-tailwind</code></pre>
+                                    <pre>
+
+                                        <div  class="inline-flex">
+                                            <div id="bash" class=""
+                                        </div>
+
+                                    </pre>
 
                                     <p>This command initializes a new project named <code>my-app</code> with a React + Tailwind CSS setup, including routing, pre-configured ESLint and Prettier rules, as well as a default folder structure.</p>
 
@@ -2330,7 +2336,7 @@
                                         <p>Utilities are organized into categories based on their primary function, making it easy to find and use the right helper for your needs.</p>
 
                                             <table class="table table9">
-                                                <caption id="utility-categories-table">Utility Categories Table</caption>
+                                                <caption>Utility Categories Table</caption>
                                                     <thead>
                                                         <tr>
                                                             <th>Category</th>
@@ -2476,6 +2482,451 @@
                                                 </ul>
 
                                                     <p>For example, a <code>useFetch</code> hook can encapsulate API calls and loading states, allowing components to consume data without managing the underlying details.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="How-to-generate-a-hook">
+
+                                    <h3>7.2 How to generate a hook</h3>
+
+                                        <p>To scaffold a new custom hook with Dev Toolkit:</p>
+
+                                            <pre>
+                                                
+                                                <div class="inline">
+                                                    
+                                                    <div id="bash">
+                                                        <div><span>bash</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>dev-toolkit generate hook useForm</span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p>The creates:</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="swift">
+                                                        <div><span>swift</span></div> 
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>src/hooks/useForm.ts</span><br>
+                                                        src/hooks/useForm.test.ts</span></code> <span class="color-blue-for-optional">(optional)</span>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p>You can then import and use it in your components:</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="tsx">
+                                                        <div><span>tsx</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>import { useForm } from '../hooks/useForm';<br>
+                                                        const {values, handleChange, reset} = useForm({name: '', email: '' });
+                                                        </span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="built-in-dev-toolkit-hooks">
+
+                                    <h3>7.3 Built-in Dev Toolkit Hooks</h3>
+
+                                        <p>The Dev Toolkit provides a suite of lightweight, beginner-friendly React hooks designed to simplify common UI and state-management tasks. These built-in hooks help reduce boilerplate, improve code readability, and offer predictable patterns for handling storage, events, timing, and responsive behavior. Each hook in the table below includes a clear purpose and is optimized for practical, real-world development needs, making them ideal tools for building consistent and maintainable front-end applications.</p>
+
+                                            <table class="table table10">
+                                                <caption>Built-in Dev Toolkit Hooks and Core Functionality</caption>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Hook Name</th>
+                                                            <th>Description</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><code>useLocalStorage</code></td>
+                                                            <td>Sync state with <code>localStorage</code></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><code>useToggle</code></td>
+                                                            <td>Toggle between <code>true</code> / <code>false</code> states</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><code>useForm</code></td>
+                                                            <td>Manage form state and input changes</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><code>uePrevious</code></td>
+                                                            <td>Track previous value of a variable</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><code>useDebounce</code></td>
+                                                            <td>Delay valueupdates for input throttling</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><code>useInterval</code></td>
+                                                            <td>Run a function repeatedly after a set delay</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><code>useClickOutside</code></td>
+                                                            <td>Detect when a user clicks outside a given element</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><code>useMediaQuery</code></td>
+                                                            <td>Respond to viewport changes (responsive UI)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><code>useOnMount</code></td>
+                                                            <td>Run effect once on mount (alternative to useEffect)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><code>useFetch</code></td>
+                                                            <td>Simplified data fetching with loading /error handling</td>
+                                                        </tr>
+                                                    </tbody>
+                                            </table>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="Example-of-key-hooks">
+
+                                    <h3>7.4 Examples of Key Hooks</h3>
+
+                                        <div class="uselocalstorage-hook">
+
+                                            <code class="bigger-code-line-size">useLocalStorage</code>
+
+                                                <p>Synchronizes a value with the browser's <code class="bigger-code-line-size">localStorage</code></p>
+
+                                                    <pre>
+
+                                                        <div class="inline">
+
+                                                            <div id="ts">
+                                                                <div><span>ts</span></div>
+                                                            </div>
+                                                            <div id="code-line">
+                                                                <code>import { useLocalStorage } from 'dev-toolkit/hooks';<br>
+                                                                const [theme, setTheme] = useLocalStorage('theme', 'dark');</code>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </pre>
+
+                                            <div class="why-use-local-storage-hook">
+
+                                                <h4><span class="bold">Why use it?</span></h4>
+
+                                                    <ul id="why-use-localstorage-hook-list" class="list">
+                                                        <li>Persist data across sessions</li>
+                                                        <li>Great for storing preferences, filters, etc.</li>
+                                                    </ul>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="usetoggle-hook">
+
+                                            <code class="bigger-code-line-size">useToggle</code>
+
+                                            <p>Simplifies toggling boolean state.</p>
+
+                                                <pre>
+
+                                                    <div class="inline">
+
+                                                        <div id="ts">
+                                                            <div><span>ts</span></div>
+                                                        </div>
+                                                        <div class="code-line">
+                                                            <code>import { useToggle } from 'dev-toolkit/hooks';<br>
+                                                            const [isOpen, toggleIsOpen] = useToggle(false);</code>
+                                                        </div>
+
+                                                    </div>
+
+                                                </pre>
+
+                                            <div class="why-use-usetoggle-hook">
+
+                                                <h4><span class="bold">Why use it?</span></h4>
+
+                                                    <ul id="why-use-usetoggle-hook" class="list">
+                                                        <li>Ideal for modals, dropdowns and switches.</li>
+                                                    </ul>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="useform-hook">
+
+                                            <code class="bigger-code-line-size">useForm</code>
+
+                                            <p>Handles form input state and field updates.</p>
+
+                                                <pre>
+
+                                                    <div class="inline">
+
+                                                        <div id="ts">
+                                                            <div><span>ts</span></div>
+                                                        </div>
+                                                        <div class="code-line">
+                                                            <code><span>const { values, handleChange, reset } = useForm({ email: '', password: ''});<br>
+                                                            &lt;input name="email" value={values.email} onChange={handleChange} /&gt;</span></code>
+                                                        </div>
+
+                                                    </div>
+
+                                                </pre>
+
+                                            <div class="why-use-useform-hook">
+
+                                                <h4><span class="bold">Features:</span></h4>
+
+                                                    <ul id="why-use-useform-hook-list" class="list">
+                                                        <li>Initial values</li>
+                                                        <li>Change handler</li>
+                                                        <li>Reset function</li>
+                                                        <li>Optional validation extension</li>
+                                                    </ul>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="usedebounce-hook">
+
+                                            <code class="bigger-code-line-size">useDebounce</code>
+
+                                            <p>Delays value updates until a specified time passes</p>
+
+                                                <pre>
+
+                                                    <div class="inline">
+
+                                                        <div id="ts">
+                                                            <div><span>ts</span></div>
+                                                        </div>
+                                                        <div class="code-line">
+                                                            <code><span>const debounceValue = useDebounce(searchTerm, 300);</span></code>
+                                                        </div>
+
+                                                    </div>
+
+                                                </pre>
+
+                                            <div class="debounce-use-cases">
+
+                                                <h4><span class="bold">Use Cases:</span></h4>
+
+                                                    <ul id="debounce-use-cases-list" class="list">
+                                                        <li>Live search</li>
+                                                        <li>Auto-save</li>
+                                                        <li>API throttling</li>
+                                                    </ul>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="useclickoutside-hook">
+
+                                            <code class="bigger-code-line-size">useClickOutside</code>
+
+                                            <p>Detects when a user lcicks outside a given element (e.g., to close modals).</p>
+
+                                                <pre>
+
+                                                    <div class="inline">
+
+                                                        <div id="ts">
+                                                            <div><span>ts</span></div>
+                                                        </div>
+                                                        <div class="code-line">
+                                                            <code><span>const ref = useRef(null);<br>
+                                                            useClickOutside(ref, () => closeModal());</span></code>
+                                                        </div>
+
+                                                    </div>
+
+                                                </pre>
+
+                                        </div>
+
+                                        <div class="usemediaquery-hook">
+
+                                            <code class="bigger-code-line-size">useMediaQuery</code>
+
+                                            <p>Tracks changes in viewport size to support responsive logic.</p>
+
+                                                <pre>
+
+                                                    <div class="inline">
+
+                                                        <div id="ts">
+                                                            <div><span>ts</span></div>
+                                                        </div>
+                                                        <div class="code-line">
+                                                            <code><span>const isMobile = useMediaQuery('(max-width: 768px)');</span></code>
+                                                        </div>
+
+                                                    </div>
+
+                                                </pre>
+
+                                                <div class="usemediaquery-usecases">
+
+                                                    <h4><span class="bold">Use Cases:</span></h4>
+
+                                                        <ul id="usemediaquery-usecases-list" class="list">
+                                                            <li>Conditional rendering</li>
+                                                            <li>Dynamic layouts</li>
+                                                            <li>Responsive features</li>
+                                                        </ul>
+
+                                                </div>
+
+                                        </div>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="writing-your-own-hooks">
+
+                                    <h3>7.5 Writing Your Own Hooks</h3>
+
+                                        <p>If your logic doesn't fit any built-in hook, scaffold a custom one:</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="bash">
+                                                        <div><span>bash</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>dev-toolkit generate hook useTheme</span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p>Example custom hook:</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="ts">
+                                                        <div><span>ts</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>
+                                                            export function useTheme(defaultTheme = 'light') {<br>
+                                                            
+                                                                const [theme, setTheme] = useLocalStorage('theme', defaultTheme);<br>
+                                                            
+                                                                const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');<br>
+
+                                                                return { theme, toggleTheme };
+
+                                                            }
+
+                                                        </span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="hook-organization-and-best-practices">
+
+                                    <h3>7.6 Hook Organization & Best Practices</h3>
+
+                                        <ul id="hook-organization-and-best-practices-list" class="list">
+                                            <li>Store all hooks in <code>src/hooks</code></li>
+                                            <li>Use the <code>use</code> prefix to ensure correct behavior with React's hook rules</li>
+                                            <li>Keep hooks focused (single responsibility)</li>
+                                            <li>Write tests for logic-heavy hooks</li>
+                                            <li>Use TypeScript generics where needed for flexibility</li>
+                                        </ul>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="testing-hooks">
+
+                                    <h3>7.7 Testing Hooks</h3>
+
+                                        <p>If test generation is enabled, you will get <code>.test.ts</code> files scaffolded automatically.</p>
+
+                                        <p>Example (with React Testing Library):</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="ts">
+                                                        <div><span>ts</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>
+                                                            import { renderHook, act } from '@testing-library/react-hooks';<br>
+
+                                                            import { useToggle } from './useToggle'l<br>
+
+                                                            test('toggles value', () => {
+                                                                const { result } = renderHook(() => useToggle());
+
+                                                                expect(result.current[0]).toBe(false);
+
+                                                                act(() => {
+                                                                    result.current[1]();
+                                                                });
+
+                                                                expect(result.current[0]).toBe(true);
+                                                            });
+                                                        </span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
 
                                 </div>
 
