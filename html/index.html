@@ -4381,6 +4381,60 @@
 
                             </div>
 
+                                <hr class="small-divider" />
+
+                            <div class="quick-reference-fix-table">
+
+                                <h3>10.11 Quick Reference Fix Table</h3>
+
+                                    <p>Even well-configured Dev Toolkit projects occasionally run into issues related to generators, extensions or template rendering. The quick-reference table below provides immediate, practical fixed for the most common problems developers encounter. Use it as a fast troubleshooting guide before diving into deeper debugging.</p>
+
+                                        <table class="table table15">
+                                            <caption>Common Dev Toolkit problems and their recommended fixed.</caption>
+
+                                            <thead>
+                                                <tr>
+                                                    <th>Problem</th>
+                                                    <th>Fix</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>CLI not found</td>
+                                                    <td>Install globally with <code>npm i -g dev-toolkit</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Generator fails</td>
+                                                    <td>Check template file, CLI path and <code>.devtoolkitrc</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Files in wrong folder</td>
+                                                    <td>Update <code>componentPath</code>, <code>pagePath</code> in config</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Plugin fails to load</td>
+                                                    <td>Check <code>index.js</code>, reinstall, verify plugin keyword</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Extensions overwrite each other</td>
+                                                    <td>Use unique command names or disable one</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Templates not rendering</td>
+                                                    <td>Validate syntax in Handlebars or EJS files</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Import paths broken</td>
+                                                    <td>Check casing and project structure</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    <p>This reference table is designed to save time by highlighting the most frequent causes or errors and their straightforward solutions. If a problem persists beyond these fixed, reviewing your extension setup, configuration paths or project structure usually reveals the root cause. With these quick checks, most issues can be resolved in seconds rather than hours.</p>
+
+                            </div>
+
                     </section>
                 
             </article>
