@@ -2957,13 +2957,1427 @@
                                                     </tr>
                                                     <tr>
                                                         <td>You rely on refs or DOM interactions</td>
-                                                        <td>You don't need React ocntext or reacti</td>
+                                                        <td>You don't need React context</td>
                                                     </tr>
                                                 </tbody>
 
                                         </table>
 
                                 </div>
+
+                            </div>
+
+                    </section>
+
+                <!-- Section 8: Services -->
+
+                    <section id="services" class="section section-services">
+
+                        <h2 class="section-title"><span class="hidden-number">8.</span> Services</h2>
+
+                            <div class="section-content">
+
+                                <div class="services-overview">
+
+                                    <p>The <span class="bold">Service Layer</span> in <span class="bold">Dev Toolkit</span> is designed o handle all interactions with external data sources, such as REST APIs, GraphQL endpoints, databases and SDKs. Services help keep components clean and focused by offloading data operations and complex business logic into reusable, testable modules.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="what-is-a-service">
+
+                                    <h3>What Is a Service?</h3>
+
+                                        <p>A service is a plain JavaScript/TypeScript module that encapsulates logic such as:</p>
+
+                                            <ul id="what-is-a-service-list" class="list">
+                                                <li>API requests (fetch, axios, etc.)</li>
+                                                <li>Authentication flows</li>
+                                                <li>Third-party integrations (e.g., Stripe, Firebase)</li>
+                                                <li>Business rules (calculations, transformations)</li>
+                                                <li>Data formatting or normalization</li>
+                                            </ul>
+
+                                    <h3>Why Use Services?</h3>
+
+                                            <ul id="why-use-services-list" class="list">
+                                                <li>Separates logic from UI</li>
+                                                <li>Promotes reuse across pages and components</li>
+                                                <li>Easier to test and maintain</li>
+                                                <li>Encourages consistent request and error handling patterns</li>
+                                            </ul>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="how-to-generate-a-service">
+
+                                    <h3>How to Generate A Service</h3>
+
+                                        <pre>
+
+                                            <div class="inline">
+
+                                                <div id="bash">
+                                                    <div><span>bash</span></div>
+                                                </div>
+                                                <div class="code-line">
+                                                    <code><span>dev-toolkit generate service Auth</span></code>
+                                                </div>
+
+                                            </div>
+
+                                        </pre>
+
+                                    <p>This creates:</p>
+
+                                        <pre>
+
+                                            <div id="bash">
+                                                <div><span>bash</span></div>
+                                            </div>
+                                            <div class="code-line">
+                                                <code><span>
+                                                    src/services/
+                                                    ├── Auth.ts
+                                                </span></code>
+                                            </div>
+
+                                        </pre>
+
+                                    <p>If tests are enabled in your config, you will also get:</p>
+
+                                        <pre>
+
+                                            <div class="inline">
+
+                                                <div id="bash">
+                                                    <div><span>bash</span></div>
+                                                </div>
+                                                <div class="code-line">
+                                                    <code><span>
+                                                        src/services/
+                                                        ├── Auth.test.ts
+                                                    </span></code>
+                                                </div>
+
+                                            </div>
+
+                                        </pre>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="default-service-structure">
+
+                                    <h2>8.3 Default Service Structure</h2>
+
+                                        <div class="generated-service-files-include">
+
+                                            <p>Each generated service file includes:</p>
+
+                                                <ul id="generated-files-list" class="list">
+                                                    <li>A named export ofr the service abject or class</li>
+                                                    <li>Placeholder Functions (e.g., <code>login</code>, <code>fetchData</code>)</li>
+                                                    <li>Error boundary with try/catch scaffolding</li>
+                                                    <li>Optional typed response intergaces (if using TypeScript)</li>
+                                                </ul>
+
+                                        </div>
+
+                                        <div class="rest-api-service-example">
+
+                                            <h3>Example (REST API Service)</h3>
+
+                                                <pre>
+
+                                                    <div class="inline">
+
+                                                        <div id="ts">
+                                                            <div><span>ts</span></div>
+                                                        </div>
+                                                        <div class="inline">
+                                                            <code><span>
+                                                                // src/services/User.ts<br>
+                                                                import axios from 'axios';<br>
+
+                                                                export const userSErvice = {
+                                                                    async getProfile(userId: string) {
+                                                                        try {
+                                                                            const response = await axios.get('/api/users/${userId}');
+                                                                            return response.data;
+                                                                        } catch (error) {
+                                                                            console.error('Failed to fetch user profile', error);
+                                                                            throw error;
+                                                                        }
+                                                                    },
+
+                                                                    async updateProfile(userId: string, data: any) {
+                                                                        return axios.put('/api/users/${userId}', data);
+                                                                    }
+                                                                };
+                                                            </span></code>
+                                                        </div>
+
+                                                    </div>
+
+                                                </pre>
+
+                                        </div>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="service-naming-conventions">
+
+                                    <h3>8.4 Service Naming Conventions</h3>
+
+                                        <table class="table table11">
+                                            <caption>Naming Conventions</caption>
+
+                                                <thead>
+                                                    <tr>
+                                                        <th>Service Type</th>
+                                                        <th>Naming example</th>
+                                                        <th>Descriptions</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Data API</td>
+                                                        <td><code>UserService</code></td>
+                                                        <td>Interacts with backend or third-party APIs</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Auth & Session</td>
+                                                        <td><code>AuthService</code></td>
+                                                        <td>Handles logic, logout, token, session flows</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Payments</td>
+                                                        <td><code>StripeService</code></td>
+                                                        <td>Communicates with payment gateways</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Business Logic</td>
+                                                        <td><code>OrderService</code></td>
+                                                        <td>Encapsulates order pricing or status rules</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Utility Integration</td>
+                                                        <td><code>GeoService,<br> PDFService</code></td>
+                                                        <td>Uses 3rd-party libraries or browser APIs</td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>    
+
+                                    <p>Use <code class="bigger-code-line-size">PascalCase</code> for file and export names.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="supported-patterns">
+
+                                    <h3>8.5 Supported Patterns</h3>
+
+                                        <p>Dev Toolkit doesn't lock you into one pattern. Services can be structured as:</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="ts">
+                                                        <div><span>ts</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>
+                                                            export const AuthService = {
+                                                                login() { /* ... */ },
+                                                                logout() { /* ... */ }
+                                                            };
+                                                        </span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p><span class="bold">Named Functions</span></h4>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="ts">
+                                                        <div><span>ts</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>
+                                                            export function login() { /* ... */ }
+                                                            export function logout() { /* ... */ }
+                                                        </span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p><span class="bold">Classes (if needed for state or constructor logic)</span></p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="ts">
+                                                        <div><span>ts</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>
+                                                            export class UploadService {
+                                                                constructor(apiKey: string) { /* ... */ }
+                                                                async uploadFile(file: File) { /* ... */ }
+                                                            }
+                                                        </span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p>Use what matches your app's architecture and complexity level.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="error-handling">
+
+                                    <h3>8.6 Error Handling Best Practices</h3>
+
+                                        <ul id="error-handling-best-practices-list" class="list">
+                                            <li>Always wrap external calls in <code>try/catch</code></li>
+                                            <li>Standardize error shape before passing to components</li>
+                                            <li>Log errors only once (not in both service and component)</li>
+                                            <li>Use error-boundaries in React for fallback UI</li>
+                                        </ul>
+
+                                    <h4><span class="bold">Example:</span></h4>
+                                        
+                                        <pre>
+
+                                            <div class="inline">
+
+                                                <div id="ts">
+                                                    <div><span>ts</span></div>
+                                                </div>
+                                                <div class="code-line">
+                                                    <code><span>
+                                                        try {
+                                                            const data = await fetchUser();
+                                                        } catch (err) {
+                                                          if (err.response?.status === 404) {
+                                                            return 'User not found';
+                                                          }
+                                                          throw err; // let boundary handle it
+                                                        }
+                                                    </span></code>
+                                                </div>
+
+                                            </div>
+
+                                        </pre>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+                                
+                                <div class="working-with-graphql-services">
+
+                                    <h3>8.7 Working with GraphQL Services</h3>
+
+                                        <p>If you are using GraphQL, Dev Toolkit supports service generation for queries and mutations.</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="bash">
+                                                        <div><span>bash</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>
+                                                            dev-toolkit generate service gql/User
+                                                        </span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p><span class="bold">Example:</span></p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="ts">
+                                                        <div><span>ts</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>
+                                                            import { gql } from '@apollo/client';
+                                                            import client from '../lib/graphqlClient';<br>
+                                                            export const UserService = {
+                                                                getUser(id: string) {
+                                                                    return client.query({
+                                                                        query: gql'
+                                                                            query GetUser($id: ID!) {
+                                                                                user(id: $id) {
+                                                                                    name
+                                                                                    email
+                                                                                }
+                                                                            }
+                                                                        ',
+                                                                        variables: { id }
+                                                                    });
+                                                                }
+                                                            }
+                                                        </span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p>GraphQL plugins or generators may be added via the plugin system.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="caching-and-state-integration">
+
+                                    <h3>8.8 Caching & STate Integration</h3>
+
+                                        <p>While dev Toolkit services are framework-agnostic, you can integrate them with your preferred state or cache libraries:</p>
+
+                                            <table class="table table12">
+                                                <caption>Caching & State Integration Examples</caption>
+
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Library</th>
+                                                            <th>Integration Example</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>React Query</td>
+                                                            <td><code>useQuery(['user', id],
+                                                                userService.getProfile)
+                                                            </code></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Redux Toolkit</td>
+                                                            <td>Dispatch from thunk with service calls</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Zustand / Jotai</td>
+                                                            <td>Call service inside store actions</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>SWR</td>
+                                                            <td><code>userSWR('/api/users', UserService.getList)</code></td>
+                                                        </tr>
+                                                    </tbody>
+                                            </table>
+
+                                        <p>This separation allows easy switching between global and component-level data management</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="testing-services">
+
+                                    <p>Services are fully testable using your toolkit of choice (Jest, Vitest, etc.)</p>
+
+                                    <p><span class="bold">Example Test:</span></p>
+
+                                        <pre>
+
+                                            <div class="inline">
+
+                                                <div id="ts">
+                                                    <div><span>ts</span></div>
+                                                </div>
+                                                <div class="code-line">
+                                                    <code>
+                                                        import { userService } from './User';
+                                                        import axios from 'axios';<br>
+
+                                                        jest.mock('axios');<br>
+
+                                                        test('should fetch user profile', async () => {
+                                                            axios.get.mockResovlvedValue({ data: { name: 'Ryan' } });<br>
+
+                                                            const profile = await UserService.getProfile('123');
+                                                            expect(profile.name).toBe('Ryan');
+                                                        });
+                                                    </code>
+                                                </div>
+
+                                            </div>
+
+                                        </pre>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="best-practices-summary">
+
+                                    <h3>8.10 Best Practices Summary</h3>
+
+                                        <p>A strong service layer follows predictable patterns that keep your codebase clean, testable, and easy to maintain. The best practices below summarize the core principles that help you write reliable services—focusing on separation of concerns, reusable logic, consistent naming, and clean data handling. Applying these guidelines ensures that your services remain scalable as your application grows and that they integrate smoothly with components, state libraries, and external APIs.</p>
+
+                                            <ul id="best-practices-summary-list" class="list">
+                                                <li>Group related functions in one service</li>
+                                                <li>Keep services pure (no DOM or component logic)</li>
+                                                <li>Use clear, intention-revealing names</li>
+                                                <li>Abstract away data source (REST/GraphQL/etc.)</li>
+                                                <li>Write unit tests for all core service functions</li>
+                                                <li>Separate transformation logic into utils if reusable</li>
+                                            </ul>
+
+                                </div>
+
+                            </div>
+
+                    </section>
+
+                <!-- Section 9: Extensions -->
+
+                    <section id="extensions" class="section section-extensions">
+
+                        <h2><span class="hidden-number">9.</span> Extensions</h2>
+
+                            <div class="section-content">
+
+                                <div class="extensions-overview">
+
+                                    <h3>Extensions Overview</h3>
+
+                                        <p>Dev Toolkit supports a <span class="bold">modular extension system</span> that allows developers to add functionality, tools, generators, templates and commands beyond the core feature set. Extensions (also called plugins) make it easy to tailor the toolkit for specific frameworks, workflows or teams-without modifying the core codebase.</p>
+
+                                            <div class="extensions-can-be">
+
+                                                <h4><span class="bold">Extensions can be:</span></h4>
+
+                                                    <ul id="extensions-can-be-list" class="list">
+                                                        <li>Developed and maintained internally by a team</li>
+                                                        <li>Installed from npm or local files</li>
+                                                        <li>Shared across projects or open-sourced</li>
+                                                    </ul>
+
+                                            </div>
+
+                                        <p>This section covers how extensions work, how to use them and how ot build your own.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="what-is-an-extension">
+
+                                    <h3>9.1 What Is an Extension</h3>
+
+                                        <p>An <span class="bold">extension</span> is a package or directory that adds custom logic to Dev Toolkit.</p>
+
+                                            <h4><span class="bold">Extensions can include:</span></h4>
+
+                                                <ul id="extensions-can-include-list" class="list">
+                                                    <li>Now CLI commands</li>
+                                                    <li>Code generators (components, services, pages, etc.)</li>
+                                                    <li>Custom templates</li>
+                                                    <li>Project bootstrap tools</li>
+                                                    <li>UI libraries or helper utilities</li>
+                                                    <li>GraphQL integrations, REST tooling, CMS APIs, etc.</li>
+                                                </ul>
+
+
+                                        <p>Extensions are loaded dynamically when added to your project and can be scoped locally (<code>dev-toolkit/extensions/</code>) or isntalled from a registry.</p>
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="installing-an-extension">
+
+                                    <h3>9.2 Installing an Extension</h3>
+
+                                        <h4><span class="bold">Option 1: From npm</span></h4>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="bash">
+                                                        <div><span>bash</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>dev-toolkit plugin add @your-org/dev-toolkit-plugin-graphql</span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+                                            
+                                        <h4><span class="bold">Option 2: From local path</span></h4>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="bash">
+                                                        <div><span>bash</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>dev-toolkit plugin add ./plugins/devtoolkit-plugin-icons</span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p>Installed plugins are automatically registered and will appear in the CLI.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="extension-directory-structure">
+
+                                    <h3>9.3 Extension Directory Structure</h3>
+
+                                        <p>Here is a typical layout of a Dev Toolkit extension:</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="pgsql">
+                                                        <div><span>pgsql</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code>
+                                                            my-extension/
+                                                            ├── index.js
+                                                            ├── package.json
+                                                            ├── generators/
+                                                            │   ├── page/
+                                                            │   └── service/
+                                                            ├── templates/
+                                                            │   └── react-dashboard/
+                                                            └── commands/
+                                                                └── deploy.js
+
+                                                        </code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                                <table class="table table13">
+                                                    <caption>Common Dev Toolkit Extension Files and their Purposes</caption>
+
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Folder/File</th>
+                                                                <th>Purpose</th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><code>index.js</code></td>
+                                                                <td>Extension entry point and registration</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><code>generators/</code></td>
+                                                                <td>Custom scaffold generators (e.g., <code>generate page</code>)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><code>templates/</code></td>
+                                                                <td>Project or component templates</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><code>commands/</code></td>
+                                                                <td>Custom CLI commands (e.g., <code>dev-toolkit deploy</code>)</td>
+                                                            </tr>
+                                                        </tbody>
+                                                </table>
+
+                                        <p>This structure keeps extensions predictable, modular and easy to navigate-whether you're adding generators, shipping templates or introducing custom CLI commands. By organizing files according to their roles, Dev Toolkit ensures that both sumple and advanced extensions remain maintainable and scalable as they evolve.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="built-in-extension-capabilities">
+
+                                    <h3>9.4 Built-In Extension Capabilities</h3>
+
+                                        <p>Dev Toolkit extensions comes with a powerful set of built-in capabilities that allow developers to customize, extend and automate the development workflow. These features five extension authors full control over scaffolding, command behavior, template handling and configuration, making it easy to adapt Dev Toolkit to the unique needs of any project or team. The table below highlights the core capabilities available to all extensions.</p>
+
+                                            <table class="table table14">
+                                                <caption>Built-In Extension Features and their Supported Functionality</caption>
+
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Feature</th>
+                                                            <th>Support?</th>
+                                                            <th>Description</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Custom generators</td>
+                                                            <td><span class="table-checkmark">✅</span></td>
+                                                            <td>Create new code scaffolds</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Custom CLI commands</td>
+                                                            <td><span class="table-checkmark">✅</span></td>
+                                                            <td>Add commands like <code>deploy</code>, <code>analyze</code>, etc.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Template injection</td>
+                                                            <td><span class="table-checkmark">✅</span></td>
+                                                            <td>Add or override existing templates</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Hooks into CLI</td>
+                                                            <td><span class="table-checkmark">✅</span></td>
+                                                            <td>Pre/post run hooks for commands</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>config extension</td>
+                                                            <td><span class="table-checkmark">✅</span></td>
+                                                            <td>Add now fields to <code>.devtoolkitrc</code></td>
+                                                        </tr>
+                                                    </tbody>
+                                            </table>
+
+                                        <p>Together, these capabilities provide a flexible foundation for building extensions that can reshape or enhance nearly every part of the Dev Toolkit workflow. Whether you're automating repetitive tasks, introducing new project templates or extending the CLI with domain-specific commands, these features ensure your extensions integrate cleanly and scale with your development needs.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="creating-a-custom-generator">
+
+                                    <h3>9.5 Example: Creating a Custom Generator</h3>
+
+                                        <p>In your plugin directory:</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="js">
+                                                        <div><span>js</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code>
+                                                            // ./generators/icon/index.js
+                                                            module.exports = function (plop) {
+                                                                plop.setGenerator('icon', {
+                                                                    description: "Create a new SVG icon component",
+                                                                    prompts: [
+                                                                    { type: 'input', name: 'name', message: 'Icon name:'}
+                                                                    ],
+                                                                    actions: [
+                                                                        {
+                                                                            type: 'add',
+                                                                            path: 'src/icons/{{pascalCase name}}.tsx,
+                                                                            templateFile: 'templates/icon.hbs'
+                                                                        }
+                                                                    ]
+                                                                });
+                                                            };
+                                                        </code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p>Now use:</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+                                                    
+                                                    <div id="bash">
+                                                        <div><span>bash</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>dev-toolkit generate icon CheckCircle</span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="custom-cli-command">
+
+                                    <h3>9.6 Example: Custom CLI Command</h3>
+
+                                        <pre>
+
+                                            <div class="inline">
+
+                                                <div id="js">
+                                                    <div><span>js</span></div>
+                                                </div>
+                                                <div class="code-line">
+                                                    <code>
+                                                        // ./commands/deploy.js
+                                                        module.exports = function (program) {
+                                                            program
+                                                                .command('deploy')
+                                                                .description('Deploy project to staging')
+                                                                .action(() => {
+                                                                    console.log('Deploying project...');
+                                                                    //add deploy script logic here
+                                                                });
+                                                        };
+                                                    </code>
+                                                </div>
+
+                                            </div>
+
+                                        </pre>
+
+                                    <p>Use it in terminal:</p>
+
+                                        <pre>
+
+                                            <div class="inline">
+
+                                                <div id="bash">
+                                                    <div><span>bash</span></div>
+                                                </div>
+                                                <div class="code-line">
+                                                    <code><span>dev-toolkit deploy</span></code>
+                                                </div>
+
+                                            </div>
+
+                                        </pre>
+
+                                </div>
+
+                                    <hr class="small-divider"/>
+
+                                <div class="extension-configuration">
+
+                                    <h3>9.7 Extension configuration</h3>
+
+                                        <p>Your plugin can define its own config schema and validate it against <code>.devtoolkitrc</code>.</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="js">
+                                                        <div><span>js</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code>
+                                                            module.exports = {
+                                                                configSchema: {
+                                                                    analyticsKey: { type: 'string', required: true }
+                                                                }
+                                                            };
+                                                        </code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p>Then in <code>.devtoolkitrc</code>:</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="json">
+                                                        <div><span>json</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code>
+                                                            {
+                                                                "analyticsKey": "UA-123456-89"
+                                                            }
+                                                        </code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="publishing-extensions">
+
+                                    <h3>9.8 Publishing Extensions</h3>
+
+                                        <p>To share an extension with others:</p>
+
+                                            <ol id="publishing-extensions-list" class="list">
+                                                <li>Create a public or private npm package</li>
+                                                <li>Add <span class="bold">"dev-toolkit-plugin"</span> to your <span class="bold">keywords</span> in <span class="bold">package.json</span></li>
+                                                <li>Publish:</li>
+                                                    <pre>
+
+                                                        <div class="inline">
+
+                                                            <div id="bash">
+                                                                <div><span>bash</span></div>
+                                                            </div>
+                                                            <div class="code-line">
+                                                                <code><span>npm publish</span></code>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </pre>
+                                                <li>Others can install with:</li>
+                                                    <pre>
+
+                                                        <div class="inline">
+
+                                                            <div id="bash">
+                                                                <div><span>bash</span></div>
+                                                            </div>
+                                                            <div class="code-line">
+                                                                <code><span>dev-toolkit plugin add @your-org/dev-toolkit-plugin-name</span></code>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </pre>
+                                            </ol>  
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="best-practices-for-extension-authors" class="list">
+
+                                    <h3>9.9 Best Practices for Extension Authors</h3>
+
+                                        <p>Creating high-quality Dev Toolkit extensions requires thoughtful structure, predictable behaviors and clear documentation. The practices below outline core principles that help ensure your extensions remain stable, maintainable and safe for users to install in any project. Following these guidelines will help extension authors build tools that integrate smoothly with the CLI while avoiding common pitfalls.</p>
+
+                                            <ul id="best-practices-for-extension-authors-list" class="list">
+                                                <li>Namespace your commands to avoid conflicts</li>
+                                                <li>Use templates with handlebars or EJS for generators</li>
+                                                <li>Keep your plugin modular and documented</li>
+                                                <li>Avoid modifying user files directly-prefer scaffolding</li>
+                                                <li>Use semver and changlogs when shareing updates</li>
+                                            </ul>
+
+                                        <p>By following these best practices, extension authors can deliver tools that are reliable, developer-friendly and easy to evolve as project requirements change. Maintaining consistent structure, clean templates and predictable command behavior not only improves the user experience but also ensures your extension scales effectively as Dev Toolkit grows.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="managing-extensions">
+
+                                    <h3>9.10 Managing Extensions</h3>
+
+                                        <p>You can manage plugins using the built-in CLI:</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="bash">
+                                                        <div><span>bash</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code>
+                                                            dev-toolkit plugin list<br>
+                                                            dev-toolkit plugin remove
+                                                        </code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p>You can also create <span class="bold">.devtoolkit.plugins.json</span> to manage plugin order and overrides.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="when-to-use-extensions">
+
+                                    <h3>9.11 When to Use Extensions</h3>
+
+                                        <p>Extensions are most useful when you need to enhance or customize the Dev toolkit workflow in a reusable, scalable way. They allow you to package generators, commands, templates and configuration enhancements into a single distributable module. The scenarios below highlight when creating an extension is the right solution- and when a simpler approach, like a one-off script, is more appropriate.</p>
+
+                                            <table class="table table14">
+                                                <caption>When to use a Dev Toolkit extension vs. alternative solutions</caption>
+
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Scenario</th>
+                                                            <th>Extension Recommended?</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>You want a team-wide set of custom generators</td>
+                                                            <td>Yes</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>You need custom deploy or audit commands</td>
+                                                            <td>Yes</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>You want to support new frameworks (e.g. Next.js)</td>
+                                                            <td>Yes</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>You are building multiple similar projects</td>
+                                                            <td>yes</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>You need a one-time script or config</td>
+                                                            <td>No (Use a shell script instead)</td>
+                                                        </tr>
+                                                    </tbody>
+                                            </table>
+
+                                        <p>Understanding when to reach for an extension helps keep your project lightweight while still snabling powerful customization when it truly matters. If the task is repetitive, shared across teams or tied to your project architecture, an extension is ideal. For temporary or one-off tasks, simple tools will keep your workflow more efficient and maintainable.</p>
+
+                                </div>
+
+                            </div>
+
+                    </section>
+
+                <!-- Section 10: Troubleshooting -->
+
+                    <section id="Troubleshooting" class="section section-troublshooting">
+
+                        <h2><span class="hidden-number">10.</span> Troubleshooting</h2>
+
+                            <div class="section-content">
+
+                                <div class="troubleshooting-overview">
+
+                                    <p>This section provides answers to the most common issues users might encounter while using Dev Toolkit. Whether it's an installation problem, command failure, broken scaffolding or plugin error, this guide offers step-by-step solutions and proactive debugging tips.</p>
+
+                                </div>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="general-debugging-strategy">
+
+                                <h3>10.1 General Debugging Strategy</h3>
+
+                                    <p>First, always check:</p>
+
+                                        <ul id="general-debugging-strategy-list" class="list">
+                                            <li>Your <span class="bold">Node.js</span> version (should match the toolkit's <code>engines</code>)</li>
+                                            <li>Your project directory (must contain a <code>.devtoolkitrc</code>)</li>
+                                            <li>Terminal error messages (look for the stack trace and line numbers)</li>
+                                            <li>Plugin and dependency versions (check for mismatches)</li>
+                                        </ul>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="common-cli-issues">
+
+                                <h3>10.2 Common CLI Issues</h3>
+
+                                    <p><span class="bold">"Command not found"</span></p>
+
+                                    <p><span class="bold">Cause:</span> Global CLI not installed or improperly linked.</p>
+
+                                        <h4><span class="bold">Solution:</span></h4>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="bash">
+                                                        <div><span>bash</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>npm install -g dev-toolkit</span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p>Or, if using locally:</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="bash">
+                                                        <div><span>bash</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>npx dev-toolkit generate component Button</span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                    <p><span class="bold">"Unknown generator type"</span></p>
+
+                                    <p><span class="bold">Cause:</span> Type in generator name or missing plugin that defines it.</p>
+
+                                            <h4><span class="bold">Solution:</span></h4>
+
+                                                <ul id="unknown-generator-type-list" class="list">
+                                                    <li>Run <code>dev-toolkit generators</code> to see available ones.</li>
+                                                    <li>Check if the plugin that adds the generator is installed and active.</li>
+                                                </ul>
+
+                                    <p><span class="bold">"Cannot find .devtoolkitrc"</span></p>
+
+                                    <p><span class="bold">Cause:</span> CLI is not being run from the project root.</p>
+
+                                            <h4><span class="bold">Solution:</span></h4>
+
+                                                <ul id="cannot-find-devtoolkitrc-list" class="list">
+                                                    <li>Make sure you are running commands from the root directory where <code>.devtoolkitrc</code> is located.</li>
+                                                    <li>If missing run:</li>
+                                                        <pre>
+
+                                                            <div class="inline">
+
+                                                                <div id="bash">
+                                                                    <div><span>bash</span></div>
+                                                                </div>
+                                                                <div class="code-line">
+                                                                    <code><span>dev-toolkit init</span></code>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </pre>
+                                                </ul>
+                        
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="generator-problems">
+
+                                <h3>10.3 Generator Problems</h3>
+
+                                    <p><span class="bold">Generated files are empty or malformed</span></p>
+
+                                        <h4><span class="bold">Solution:</span></h4>
+
+                                            <ul id="empty-or-malformed-files-list" class="list">
+                                                <li>Check that the template file exists and has valid syntax.</li>
+                                                <li>If you are running a custom generator, verify <code>templateFile</code> path is correct.</li>
+                                                <li>Run <code>dev-toolkit doctor</code> if available.</li>
+                                            </ul>
+
+                                    <p><span class="bold">"Cannot read property 'name' of undefined"</span></p>
+
+                                        <h4><span class="bold">Solution:</span></h4>
+
+                                            <ul id="property-reads-undefined-list" class="list">
+                                                <li>use flags (e.g., <code>--name Button</code>) or provide interactive input.</li>
+                                                <li>Check if your custom generator uses a prompt that's not returning a value.</li>
+                                            </ul>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="extension-and-plugin-issues">
+
+                                <h3>10.4 Extension & Plugin Issues</h3>
+
+                                    <p><span class="bold">"Plugin not recognized" or doesn't load</span></p>
+
+                                        <h4><span class="bold">Solution:</span></h4>
+
+                                            <ul id="plugin-not-recognized-list">
+                                                <li>Ensure plugin has an <code>index.js</code> that currectlu registers commands or generators.</li>
+                                                <li>Reinstall:</li>
+                                                    <pre>
+
+                                                        <div class="inline">
+
+                                                            <div id="bash">
+                                                                <div><span>bash</span></div>
+                                                            </div>
+                                                            <div class="code-line">
+                                                                <code>
+                                                                    dev-toolkit plugin remove plugin-name
+                                                                    dev-toolkit plugin add plugin-name
+                                                                </code>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </pre>
+                                                <li>Check <code>package.json</code> for <code>main</code> field and <code>"dev-toolkit-plugin"</code> keyword.</li>
+                                            </ul>
+
+                                    <p><span class="bold">"Hook error in plugin"</span></p>
+
+                                        <h4><span class="bold">Solution</span></h4>
+
+                                            <ul id="hook-error-in-plugin-list" class="list">
+                                                <li>Open the plugin file and wrap logic in <code>try/catch</code>.</li>
+                                                <li>Update to the latest version of the plugin if it's community-maintained.</li>
+                                            </ul>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="template-errors">
+
+                                <h3>10.5 Template Errors</h3>
+
+                                    <p><span class="bold">"Template not found"</span></p>
+
+                                        <h4><span class="bold">Solution:</span></h4>
+
+                                            <ul id="template-errors-list">
+                                                <li>Check path spelling and file extension (.<code>hbs</code>, <code>.ehs</code>, etc.)</li>
+                                                <li>If using an extension, verify that it exports the template location properly.</li>
+                                            </ul>
+
+                                    <p><span class="bold">Scaffolded files go to the wrong location</span></p>
+
+                                    <p><span class="bold">Cause:</span> Incorrect <code>componentPath</code> or <code>pagePath</code> in <code>.devtoolkitrc</code>.</p>
+
+                                        <h4><span class="bold">Solution:</span></h4>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="json">
+                                                        <div><span>json</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code>
+                                                            {
+                                                                "componentPath": "src/components",
+                                                                "pagePath": "src/pages"
+                                                            }
+                                                        </code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                                <ul id="scaffolded-files-in-wrong-location-list" class="list">
+                                                    <li>Adjust these settings based on your desired output structure.</li>
+                                                </ul>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="file-naming-and-casing-conflicts">
+
+                                <h3>10.6 File Naming and Casing Conflicts</h3>
+
+                                    <p><span class="bold">Wrong file name casing (e.g., <code>button.js</code> instead of <code>Button.tsx</code></span></p>
+
+                                    <p><span class="bold">Cause:</span> Misconfigured <code>fileStyle</code> in <code>.devtoolkitrc</code>.</p>
+
+                                        <h4><span class="bold">Solution:</span></h4>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="json">
+                                                        <div><span>json</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>"fileStyle": "PascalCase"</span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                                <p><span class="bold">Options:</span></p>
+
+                                                    <ul id="file-naming-and-casing-conflicts-list" class="list">
+                                                        <li><code>camelCase</code></li>
+                                                        <li><code>PascalCase</code></li>
+                                                        <li><code>kebab-case</code></li>
+                                                    </ul>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="typescript-and-linting-problems">
+
+                                <h3>10.7 TypeScript & Linting Problems</h3>
+
+                                    <p><span class="bold">"TS2307: Cannot find module './Button.module.css'"</span></p>
+
+                                    <p><span class="bold">Cause:</span> Missingfile, or incorrect path after scaffolding.</p>
+
+                                        <h4><span class="bold">Solution:</span></h4>
+
+                                            <ul id="cannot-find-module-list">
+                                                <li>Check if style files are being generated.</li>
+                                                <li>If not, verify <code>"style": "css-module"</code> is set in <code>.devtoolkitrc</code>.</li>
+                                            </ul>
+
+                                    <p><span class="bold">"eslint: 'React' is defined but never used"</span></p>
+
+                                    <p><span class="bold">Cause:</span> Component structure might not use <code>React</code> directly.</p>
+
+                                        <h4><span class="bold">Solution:</span></h4>
+
+                                            <ul id="eslint-problems-list">
+                                                <li>If using React 17+ with the new JSX transform, remove unnecessary <code>import React from 'react';</code>.</li>
+                                            </ul>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="project-initialization-issues">
+
+                                <h3>10.8 Project Initialization Issues</h3>
+
+                                    <p><span class="bold">"Missing src/ directory"</span></p>
+
+                                    <p><span class="bold">Cause:</span> Project was not bootstrapped properly.</p>
+
+                                        <h4><span class="bold">Solution:</span></h4>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="bash">
+                                                        <div><span>bash</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code><span>dev-toolkit init react-app</span></code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                                <p>This will scaffold a complete project with:</p>
+
+                                                    <ul id="missing-src-directory-list">
+                                                        <li><code>src/components</code></li>
+                                                        <li><code>src/pages</code></li>
+                                                        <li><code>src/hooks</code></li>
+                                                        <li><code>.devtoolkitrc</code></li>
+                                                    </ul>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="plugin-conflicts">
+
+                                <h3>10.9 Plugin Conflicts</h3>
+
+                                    <p><span class="bold">Two plugins define the same generator or command</span></p>
+
+                                    <p><span class="bold">Cause:</span> Overlapping namespace between plugins.</p>
+
+                                        <h4><span class="bold">Solution:</span></h4>
+
+                                            <ul id="plugin-conflicts-list" class="list">
+                                                <li>Uninstall or temporarily disable one of the plugins.</li>
+                                                <li>Use fully qualified command names if supported (e.g., <code>@my/plugin:generate</code>).</li>
+                                            </ul>
+
+                            </div>
+
+                                <hr class="small-divider" />
+
+                            <div class="reporting-issues">
+
+                                <h3>10.10 Reporting Issues</h3>
+
+                                    <p>If you've ruled out configuration and plugin errors, and still experience problems:</p>
+
+                                        <ul id="reporting-issues-problems-list" class="list">
+                                            <li>Enable verbose logging (if available)</li>
+                                                <pre>
+
+                                                    <div class="inline">
+
+                                                        <div id="bash">
+                                                            <div><span>bash</span></div>
+                                                        </div>
+                                                        <div class="code-line">
+                                                            <code><span>dev-toolkit generate component Button --verbose</span></code>
+                                                        </div>
+
+                                                    </div>
+
+                                                </pre>
+                                            <li>Open a GitHub issue or visit the community Discord/Slack if the toolkit provides one.</li>
+                                        </ul>
+
+                                    <p>When reporting:</p>
+
+                                        <ul id="when-reporting-list" class="list">
+                                            <li>include your <code>.devtoolkitrc</code></li>
+                                            <li>include the exact CLI command used</li>
+                                            <li>Include the stack trace (if any)</li>
+                                        </ul>
 
                             </div>
 
