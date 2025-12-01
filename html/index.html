@@ -4436,6 +4436,335 @@
                             </div>
 
                     </section>
+
+                <!-- Section 11: Changelog -->
+
+                    <section id="changlog" class="section section-changelog">
+
+                        <h2><span class="hidden-number">11.</span> Changelog</h2>
+
+                            <div class="section-content">
+
+                                <div class="changelog-overview">
+
+                                    <p>The <span class="bold">Changelog</span> provides a chronological record of updates, bug fixes, improvements and breaking changes to <span class="bold">Dev Toolkit</span>. It follows <a href="https://semver.org/">Semantic Versioning (SemVer)</a>, which uses the format:</p>
+
+                                        <pre>
+
+                                            <div class="inline">
+
+                                                <div id="none">
+                                                    <div><span></span></div>
+                                                </div>
+                                                <div class="code-line">
+                                                    <code><span>MAJOR.MINOR.PATCH</span></code>
+                                                </div>
+
+                                            </div>
+
+                                        </pre>
+
+                                            <ul id="dev-toolkit-changelog-list">
+                                                <li><code>MAJOR</code>: Breaking changes</li>
+                                                <li><code>MINOR</code>: Backwards-compatible features</li>
+                                                <li><code>PATCH</code>: Backwards-compatible bug fixes</li>
+                                            </ul>
+
+                                    <p>All official Dev Toolkit releases are tagged in version control (e.g., Git) and optionally published to NPM or other registries depending on your project setup.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="format-quidelines">
+
+                                    <h3>11.1 Format Guidelines</h3>
+
+                                        <p>Each release entry follows this format:</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div is="md">
+                                                        <div><span>md</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code>
+                                                            ## [version] - YYYYY-MM-DD<br>
+
+                                                            ### added
+                                                            - New features and functionality<br>
+
+                                                            ### Changed
+                                                            - Modification or improvements<br>
+
+                                                            ### fixed
+                                                            - Bug fixes
+
+                                                            ### Removed
+                                                            - Deprecated or removed functionality
+
+                                                            ### Breaking changes
+                                                            - Changes that require user updates
+                                                        </code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p>you can store this file as <code>CHANGELOG.md</code> at the project root or publish release notes via GitHub/GitLab.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="example-changelog">
+
+                                    <h3>11.2 Example Changelog</h3>
+
+                                        <p>A well-maintained changelog provides a clear and transparent history of updates, improvements and fixes made to Dev Toolkit over time. This example demonstrates how version entries should be structured - highlighting new features, changes, fixed and breaking updates in a consistent, easy-to-scan format. Following this structure ensures developers can quickly understand what has changed between releases and how updates may impact their workflow.</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="md">
+                                                        <div><span>md</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code>
+                                                            # Changelog
+
+                                                            ## [1.3.0] - 2025-07-25
+
+                                                            ### Added
+                                                            - `useClickOutside` hook for detecting clicks outside an element
+                                                            - New `generate layout` command in CLI
+                                                            - Plugin system now supports scoped config validation
+
+                                                            ### Changed
+                                                            - Reorganized default project template structure for better readability
+                                                            - Improved error messages for invalid `.devtoolkitrc` keys
+
+                                                            ### Fixed
+                                                            - `useLocalStorage` was not updating on key change — fixed
+                                                            - CLI would sometimes fail silently on Windows — fixed
+
+                                                            ---
+
+                                                            ## [1.2.1] - 2025-07-10
+
+                                                            ### Fixed
+                                                            - Fixed a bug where `generate page` would overwrite existing pages without warning
+
+                                                            ---
+
+                                                            ## [1.2.0] - 2025-06-28
+
+                                                            ### Added
+                                                            - Template support for Svelte and SolidJS projects
+                                                            - Custom output directory option for generators
+
+                                                            ### Breaking Changes
+                                                            - `generate page` no longer defaults to `src/pages` — must be configured manually or passed via `--path`
+
+                                                            ---
+
+                                                            ## [1.1.0] - 2025-06-01
+
+                                                            ### Added
+                                                            - Initial plugin support (CLI: `plugin add`, `plugin list`)
+                                                            - `generate service` command with REST and GraphQL presets
+
+                                                            ---
+
+                                                            ## [1.0.0] - 2025-05-10
+
+                                                            Initial release of Dev Toolkit!
+
+                                                            ### Features
+                                                            - Project initialization for React, Vue, and Vanilla JS
+                                                            - Generators for components, pages, hooks, services
+                                                            - Theme-ready component library
+                                                            - Utility functions for formatting, debouncing, storage
+                                                            - CLI with config-based customization 
+                                                        </code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                        <p>Keeping your changelog organized and up to date is essential for smooth team collaboration and predictable versioning. Whether you're releasing now capabilities, restructuring existing features, or fixing critical bugs, documenting each change helps users stay informed and confident in upgrading. A clear changelog is not just a record - it's a core part of producing reliable, developer-friendly tools.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="managing-the-changelog">
+
+                                    <h3>11.3 Managing the Changelog</h3>
+
+                                        <p>Maintaining a clear and consistent changelog is essential for communication updates across your team and user base. A well-managed <code>CHANGELOG.md</code> makes it easy to track what has changed, what's coming next and how each version impacts existing projects. The practices below outline a reliable workflow that keeps your changelog organized, readable and aligned with semantic versioning standards.</p>
+
+                                            <ul id="managing-the-changelog-list">
+                                                <li>Update <code>CHANGELOG.md</code> for <span class="bold">every release</span></li>
+                                                <li>Keep the <span class="bold">most recent version at the top</span></li>
+                                                <li>Use consistent language and emojis for readability (optional but encouraged)</li>
+                                                <li>Keep unreleased changes in a <code>[Unreleased]</code> section until tagged</li>
+                                            </ul>
+
+                                        <p>By following these guidelines, your changelog becomes a dependable source of truth for anyone using or contributing to your project. Consistency not only improves clarity but also builds trust - helping developers understand the evolution of your tooling at a glance. With a predictable structure and disciplined update process, maintaining your changelog becomes a seamless part of each release cycle.</p>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="optional-automation-tips">
+
+                                    <h3>11.4 Optional Automation Tips</h3>
+
+                                        <p>If you are working in a team or planning to publish Dev Toolkit to NPM or GitHub, consider automating changelog updates using:</p>
+
+                                            <table class="table table16">
+                                                <caption>Automation Tips Table</caption>
+
+                                                <thead>
+                                                    <tr>
+                                                        <th>Tool</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td><code>standard-version</code></td>
+                                                        <td>Automates version bump + changelog from commits</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>changesets</code></td>
+                                                        <td>Enables PR-based changelog creation</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>semantic-release</code></td>
+                                                        <td>fully automates publishing & changelog</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>GitHub Release</td>
+                                                        <td>Manual or auto-generated release notes</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+
+                                <div class="when-to-bump-a-version">
+
+                                    <h3>11.5 When to Bump a Version</h3>
+
+                                        <p>Version numbers communicate the impact and scope of each release. Understanding when to apply a <span class="bold">PATCH</span>, <span class="bold">MINOR</span>, or <span class="bold">MAJOR</span> update ensures that users of your toolkit can anticipate how a change will affect their projects. This section outlines the criteria for choosing the appropriate version bump whenever you modify functionality. introduce new features, or adjust existing behavior.</p>
+
+                                            <table class="table table17">
+                                                <caption>Version Bump Rules Based on the Type of Change</caption>
+
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Change Type</th>
+                                                            <th>Version Bump</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Fixes a bug, no API changes</td>
+                                                            <td>PATCH</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Adds new backward-compatible feature</td>
+                                                            <td>MINOR</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Removes/renames/changes behavior</td>
+                                                            <td>MAJOR</td>
+                                                        </tr>
+                                                    </tbody>
+                                            </table>
+
+                                </div>
+
+                                    <hr class="small-divider" />
+                                
+                                <div class="keeping-extensions-versioned">
+
+                                    <h3>11.6 Keeping Extensions Versioned</h3>
+
+                                        <p>If you build extensions or plugins for Dev Toolkit, they should maintain their own changelogs, separate from teh core toolkit.</p>
+
+                                        <p>Each extension should include:</p>
+
+                                            <pre>
+
+                                                <div class="inline">
+
+                                                    <div id="pgsql">
+                                                        <div><span>pgsql</span></div>
+                                                    </div>
+                                                    <div class="code-line">
+                                                        <code>
+                                                            my-plugin/
+                                                            ├── CHANGELOG.md
+                                                            ├── package.json (with version)
+                                                        </code>
+                                                    </div>
+
+                                                </div>
+
+                                            </pre>
+
+                                </div>
+
+                            </div>
+
+                    </section>
+
+                <!-- Section 12: Frequently Asked Questions(FAQ) -->
+
+                    <section id="faq" class="section section-faq">
+
+                        <h2><span class="hidden-number">12.</span> Frequently Asked Questions (FAQ)</h2>
+
+                            <p>This section addresses the most common questions developers ask while using Dev Toolkit-from installation issues and config settings to CLI behavior and customization.</p>
+
+                               <p><span class="bold">Q: What is Dev Toolkit and what problems does it solve?</span></p>
+                               
+                               <p><span class="bold">A:</span> Dev Toolkit is a developer-first CLI and file generator designed to help you quickly scaffold components, pages, utilities, hooks and more. It reduces repetitive tasks, enforces consistent structure and speeds up project setup with customizable templates and configurations.</p>
+
+                               <p><span class="bold">Q: Do I need to install it globally?</span></p>
+
+                               <p><span class="bold">A: No. You can use it globally (<code>npm install -g dev-toolkit</code>) or locally via <code>npx</code>:</span></p>
+
+                                <pre>
+
+                                    <div class="inline">
+                                        
+                                        <div id="bash">
+                                            <div><span>bash</span></div>
+                                        </div>
+                                        <div class="code-line">
+                                            <code><span>npx dev-toolkit generate component Button</span></code>
+                                        </div>
+
+                                    </div>
+
+                                </pre>
+
+                                <p><span class="bold">Q: How do </span></p>
+
+                    </section>
                 
             </article>
         </main>
